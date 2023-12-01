@@ -1,0 +1,11 @@
+base\BasePage.class
+base\BaseTest.class
+pages\FromScratchEventPage.class
+Test\DeleteEventTest2.class
+Utls\PropertiesUtils.class
+pages\LoginPage.class
+Factory\DriverFactory.class
+Test\LoginTest3.class
+pages\DeleteEventPage.class
+Test\FromScratchEventTest1.class
+Utls\ConfigUtils.class
