@@ -9,7 +9,7 @@ import pages.LoginPage;
 import pages.RegistrationParticipantsPage;
 
 @Test(priority = 1)
-public class FromScratchEventTest extends BaseTest {
+public class FullHappyScenarioTest extends BaseTest {
 private WebDriver driver;
 
     @Test(description = "Create Event From Scratch Test")
@@ -41,6 +41,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         registrationParticipantsPage.CreatePackage();
         registrationParticipantsPage.CreateTicketType();
         registrationParticipantsPage.CreateVenue();
+        registrationParticipantsPage.CreateSession();
     }
 
     /* @Test(description = "Create Group and Add User")

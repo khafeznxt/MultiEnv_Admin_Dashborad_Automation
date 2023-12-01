@@ -33,7 +33,7 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath =  "//*[@id=\"portal\"]/div/div[3]/div/button[2]")
     protected WebElement savebttn;
 
-    @FindBy(xpath=  "//*[text() =\"KarimGroup234\"]")
+    @FindBy(xpath=  "//*[text() =\"KarimGroup235\"]")
     protected WebElement createdgroup;
 
 
@@ -186,7 +186,7 @@ public class RegistrationParticipantsPage extends BasePage {
     registration.click();
     participants.click();
     creatgroupbttn.click();
-    groupname.sendKeys("KarimGroup234");
+    groupname.sendKeys("KarimGroup235");
     savebttn.click();
         // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
        //WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div[1]")));
@@ -199,17 +199,17 @@ public class RegistrationParticipantsPage extends BasePage {
 
     public void CreateUser(){
 
-        fname.sendKeys("AutoTestAa9");
+        fname.sendKeys("AutoTestAa0");
         lname.sendKeys("User");
-        email.sendKeys("auto@101autotestAa9.com");
+        email.sendKeys("auto@101autotestAa0.com");
         createuserbttn.click();
     }
     public void CreatePackage(){
     eventconfig.click();
     packages.click();
     newpackagebttn.click();
-    packagetitle.sendKeys("KPackage15");
-    packagepriority.sendKeys("15");
+    packagetitle.sendKeys("KPackage16");
+    packagepriority.sendKeys("16");
     savepackagebttn.click();
 
 
@@ -222,7 +222,7 @@ public class RegistrationParticipantsPage extends BasePage {
         eventconfig.click();
         tickettype.click();
         addticketbttn.click();
-        ticketname.sendKeys("KType9");
+        ticketname.sendKeys("KType0");
         packagesdropdown.click();
         selectpackage.click();
         createticketbttn.click();
@@ -239,8 +239,8 @@ public class RegistrationParticipantsPage extends BasePage {
         addvenue.click();
         venuetype.click();
         venuetypevalue.click();
-        venuename.sendKeys("KVenue11");
-        venuecapacity.sendKeys("10");
+        venuename.sendKeys("KVenue12");
+        venuecapacity.sendKeys("12");
         locationsection.click();
         //location.sendKeys("Pyramids Gardens, Al Haram, Egypt");
         //placelist.click();
@@ -259,7 +259,7 @@ public class RegistrationParticipantsPage extends BasePage {
        planning.click();
        sessions.click();
        addsessionbttn.click();
-       sessiontitle.sendKeys("Ksession2");
+       sessiontitle.sendKeys("Ksession3");
        sessionattire.sendKeys("formal");
        sessiondate.sendKeys("12/05/2023");
        sessionfrom.sendKeys("10:00 AM");
