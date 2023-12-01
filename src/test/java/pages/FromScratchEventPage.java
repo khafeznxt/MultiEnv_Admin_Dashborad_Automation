@@ -55,7 +55,7 @@ public class FromScratchEventPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div/section/div[2]/div/div[2]/button")
     protected WebElement createbtn;
 
-    @FindBy(xpath=  "//*[text() =\"karimAuto11\"]")
+    @FindBy(xpath=  "//*[text() =\"karimAuto45\"]")
     protected WebElement createdevent;
 
     public void load() {
@@ -66,10 +66,10 @@ public class FromScratchEventPage extends BasePage {
 
         createvent.click();
         fromscratch.click();
-        eventname.sendKeys("karimAuto44");
+        eventname.sendKeys("karimAuto45");
         eventtype.click();
         typevalue.click();
-        eventslug.sendKeys("karimauto44");
+        eventslug.sendKeys("karimauto45");
         startdate.sendKeys("12022023");
         starttime.sendKeys("1200PM");
         endtime.sendKeys("0800PM");

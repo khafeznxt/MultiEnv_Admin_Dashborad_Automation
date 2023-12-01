@@ -42,6 +42,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         registrationParticipantsPage.CreateTicketType();
         registrationParticipantsPage.CreateVenue();
         registrationParticipantsPage.CreateSession();
+        registrationParticipantsPage.CreateNewTicketInsideSession();
     }
 
     /* @Test(description = "Create Group and Add User")
