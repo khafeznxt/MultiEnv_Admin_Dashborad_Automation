@@ -2,6 +2,7 @@ package pages;
 
 import base.BasePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,7 +25,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/section/div[2]/div/div[3]/button/div/span")
     protected WebElement creatgroupbttn;
-    @FindBy(xpath=  "//*[text() =\"karimAuto44\"]")
+    @FindBy(xpath=  "//*[text() =\"karimevent_8\"]")
     protected WebElement createdevent;
 
     @FindBy(id=  "groupName")
@@ -33,7 +34,7 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath =  "//*[@id=\"portal\"]/div/div[3]/div/button[2]")
     protected WebElement savebttn;
 
-    @FindBy(xpath=  "//*[text() =\"KarimGroup238\"]")
+    @FindBy(xpath=  "//*[text() =\"KarimGroup253\"]")
     protected WebElement createdgroup;
 
 
@@ -181,7 +182,7 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/form/section/div[2]/div/div/div/div[2]/button")
     protected  WebElement sessioncreatebttn;
 
-    @FindBy(xpath=  "//*[text() =\"Ksession8\"]")
+    @FindBy(xpath=  "//*[text() =\"Ksession9\"]")
     protected WebElement newsession;
 
     //Add Ticket to Session
@@ -202,7 +203,7 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/aside[2]/form/div[3]/section/div[6]/div[2]/select")
     protected  WebElement sessiontickettype;
 
-    @FindBy(id = "18")
+    @FindBy(id = "NOT_SELECTED")
     protected WebElement sessiontickettypevalue;
 
 
@@ -210,12 +211,49 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/aside[2]/form/div[2]/div/button[2]")
     protected  WebElement savenewticketbttn;
 
+    // Create Activity Elements
+
+    @FindBy(xpath=  "//*[text() =\"Content\"]")
+    protected WebElement content;
+    @FindBy(xpath=  "//*[text() =\"Itinerary\"]")
+    protected WebElement itinerary;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div/div[2]/div[2]/div[3]/div[97]/div")
+    protected WebElement calender;
+
+    @FindBy(id = "activityTitle")
+    protected  WebElement activitytitle;
+
+    @FindBy(id = "attire")
+    protected  WebElement activityattire;
+
+    @FindBy(id = "activityDate")
+    protected  WebElement activitydate;
+
+    @FindBy(id = "startTime")
+    protected  WebElement activitystarttime;
+
+    @FindBy(id = "endTime")
+    protected  WebElement activityendtime;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div[1]/aside[2]/div/form/div[2]/section[2]/div[11]/div[2]/div[2]")
+    protected WebElement activityhtimezone;
+
+
+
+    @FindBy(css = "[value=\"(UTC+03:00) Doha\"]")
+    protected WebElement activitytimezonevalue;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div[1]/aside[2]/div/form/div[2]/section[1]/div[2]/div/button[2]")
+    protected WebElement activitysavebutton;
+
+
     public void CreateGroup() {
         createdevent.click();
     registration.click();
     participants.click();
     creatgroupbttn.click();
-    groupname.sendKeys("KarimGroup238");
+    groupname.sendKeys("KarimGroup253");
     savebttn.click();
         // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
        //WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div[1]")));
@@ -228,30 +266,32 @@ public class RegistrationParticipantsPage extends BasePage {
 
     public void CreateUser(){
 
-        fname.sendKeys("AutoTestAcad");
+        fname.sendKeys("AutoTestZY");
         lname.sendKeys("User");
-        email.sendKeys("auto@101autotestAcad.com");
+        email.sendKeys("auto@101autotestZY.com");
         createuserbttn.click();
     }
     public void CreatePackage(){
     eventconfig.click();
     packages.click();
     newpackagebttn.click();
-    packagetitle.sendKeys("KPackage19");
-    packagepriority.sendKeys("19");
+    packagetitle.sendKeys("KPackage33");
+    packagepriority.sendKeys("33");
     savepackagebttn.click();
 
 
     }
     public void CreateTicketType(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() =\"Event Config\"]")));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text() =\"Event Config\"]")));
         //driver.navigate().refresh();
-
-        eventconfig.click();
-        tickettype.click();
+        driver.navigate().to("https://dev-admin.blink.global/tickets/p/1");
+        WebDriverWait wait8 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element2 = wait8.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]")));
+        //eventconfig.click();
+        //tickettype.click();
         addticketbttn.click();
-        ticketname.sendKeys("KType1");
+        ticketname.sendKeys("KType6");
         packagesdropdown.click();
         selectpackage.click();
         createticketbttn.click();
@@ -259,20 +299,21 @@ public class RegistrationParticipantsPage extends BasePage {
     }
 
     public void CreateVenue(){
+        driver.navigate().to("https://dev-admin.blink.global/venues/p/1");
 
         //createdevent.click();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text() =\"Planning\"]")));
-        planning.click();
-        venues.click();
-        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+       // planning.click();
+       // venues.click();
+
+        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement element3 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text() =\"Add Venue\"]")));
 
         addvenue.click();
         venuetype.click();
         venuetypevalue.click();
-        venuename.sendKeys("KVenue12");
-        venuecapacity.sendKeys("12");
+        venuename.sendKeys("KVenue14");
+        venuecapacity.sendKeys("14");
         locationsection.click();
         //location.sendKeys("Pyramids Gardens, Al Haram, Egypt");
         //placelist.click();
@@ -284,14 +325,15 @@ public class RegistrationParticipantsPage extends BasePage {
     public void CreateSession(){
 
         //createdevent.click();  // to test separated , Comment if this test will be a part of the whole test
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element3 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() =\"Planning\"]")));
+        //WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(10));
+       // WebElement element3 = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() =\"Planning\"]")));
         //driver.navigate().refresh();
+        driver.navigate().to("https://dev-admin.blink.global/sessions/p/1");
 
-       planning.click();
-       sessions.click();
+        //planning.click();
+        //sessions.click();
        addsessionbttn.click();
-       sessiontitle.sendKeys("Ksession8");
+       sessiontitle.sendKeys("Ksession9");
        sessionattire.sendKeys("formal");
        sessiondate.sendKeys("12/05/2023");
        sessionfrom.sendKeys("10:00 AM");
@@ -310,16 +352,31 @@ public class RegistrationParticipantsPage extends BasePage {
         planning.click();      // to test separated , Comment if this test will be a part of the whole test
         sessions.click();       // to test separated , Comment if this test will be a part of the whole test
         newsession.click();  */      // to test separated , Comment if this test will be a part of the whole test
+        driver.navigate().to("https://dev-admin.blink.global/sessions/41?tab=Tickets");
         WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element4 = wait4.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/form/section/div[2]/div/div[1]/ul/li[2]/strong[4]/div")));
+        WebElement element4 = wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/form/section/div[2]/div/div[1]/ul/li[2]/strong[4]/div")));
 
-        tickets.click();
+        //tickets.click();
         sessionaddticket.click();
         ticketquantity.sendKeys("10");
         sessiontickettype.click();
         sessiontickettypevalue.click();
         savenewticketbttn.click();
 
+    }
+
+    public void CreateActivityForAnEvent(){
+
+        content.click();
+        itinerary.click();
+        calender.click();
+        activitytitle.sendKeys("karimactivity_1");
+        activityattire.sendKeys("formal");
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", activityhtimezone);
+        activityhtimezone.click();
+        activitytimezonevalue.click();
+        activitysavebutton.click();
     }
 
 }

@@ -19,34 +19,34 @@ public class DeleteEventPage extends BasePage {
     // You should put here the event/s name/s and how many elements you want to delete [Note:Comment the element that you will not use ]
      @FindBy(xpath=  "//*[text() =\"karimAuto10\"]")
     protected WebElement createdevent1;
- /*   @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 19:44:09\"]")
+    @FindBy(xpath=  "//*[text() =\"karimAuto10\"]")
     protected WebElement createdevent2;
 
-    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 19:42:57\"]")
+    @FindBy(xpath=  "//*[text() =\"karimAuto10\"]")
     protected WebElement createdevent3;
 
-    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 19:41:46\"]")
+    @FindBy(xpath=  "//*[text() =\"karimAuto10\"]")
     protected WebElement createdevent4;
 
-    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 18:56:13\"]")
+    @FindBy(xpath=  "//*[text() =\"Set Later Event: 28-11-2023 15:44:55\"]")
     protected WebElement createdevent5;
 
-    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 18:53:39\"]")
+    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 16:31:31\"]")
     protected WebElement createdevent6;
 
-    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 17:15:15\"]")
+    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 16:28:50\"]")
     protected WebElement createdevent7;
 
-    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 17:11:59\"]")
+    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 16:23:18\"]")
     protected WebElement createdevent8;
 
-    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 17:09:51\"]")
+    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 14:38:38\"]")
     protected WebElement createdevent9;
 
-    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 16:58:26\"]")
-    protected WebElement createdevent10;*/
+    @FindBy(xpath=  "//*[text() =\"Set Later Event: 22-11-2023 14:26:08\"]")
+    protected WebElement createdevent10;
 
-    // the end of the event elements which could be deleted , you can add more events elements to delete
+    // the end of the event elements which could be deleted , you can add more events elements to be deleted
     @FindBy(xpath=  "//*[text() =\"Event Config\"]")
     protected WebElement eventconfig;
 
@@ -72,8 +72,7 @@ public class DeleteEventPage extends BasePage {
 
 
     public LoginPage DeleteEvent(){
-List<WebElement> events = List.of(new WebElement[]{createdevent1 });
-        //, createdevent2  , createdevent3,createdevent4,createdevent5 , createdevent6 , createdevent7  , createdevent8,createdevent9,createdevent10});
+List<WebElement> events = List.of(new WebElement[]{createdevent1, createdevent2  , createdevent3,createdevent4,createdevent5 , createdevent6 , createdevent7  , createdevent8,createdevent9,createdevent10});
 for (WebElement element : events ){
        element.click();
         eventconfig.click();
@@ -83,7 +82,7 @@ for (WebElement element : events ){
         deletebttn.click();
         deletetxt.sendKeys("delete-event-permanently");
         deleteforeverbttn.click();
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"col-1\"]/div")));
 
 
