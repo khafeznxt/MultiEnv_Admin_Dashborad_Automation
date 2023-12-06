@@ -44,8 +44,6 @@ public class ContentItineraryPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/aside[2]/div/form/div[2]/section[2]/div[11]/div[2]/div[2]")
     protected WebElement activityhtimezone;
 
-
-
     @FindBy(css = "[value=\"(UTC+03:00) Doha\"]")
     protected WebElement activitytimezonevalue;
 

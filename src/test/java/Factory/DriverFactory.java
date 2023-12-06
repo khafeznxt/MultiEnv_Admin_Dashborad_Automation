@@ -43,7 +43,7 @@ public class DriverFactory {
             default:
                 throw new RuntimeException("The Browser is Not Supported");
         }
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         //driver.manage().window().maximize();
         return driver;
     }

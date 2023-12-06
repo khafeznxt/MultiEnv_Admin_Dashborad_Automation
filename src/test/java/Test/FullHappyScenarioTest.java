@@ -33,7 +33,8 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
 
-       // fromScratchEventPage.CreateEventFromScratch();
+        // remove the comment to create new event for the full happypath scenario
+        //fromScratchEventPage.CreateEventFromScratch();
 
         RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
         registrationParticipantsPage.CreateGroup();
