@@ -26,7 +26,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
     @FindBy(id = "create-group")
     protected WebElement creatgroupbttn;
-    @FindBy(xpath=  "//*[text() =\"Automation 24\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  12\"]")
     protected WebElement createdevent;
 
     @FindBy(id=  "groupName")
@@ -35,7 +35,7 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath =  "//*[@id=\"portal\"]/div/div[3]/div/button[2]")
     protected WebElement savebttn;
 
-    @FindBy(xpath=  "//*[text() =\"AutoGroup 21\"]")
+    @FindBy(xpath=  "//*[text() =\"AutoGroup 42\"]")
     protected WebElement createdgroup;
 
 
@@ -133,7 +133,9 @@ public class RegistrationParticipantsPage extends BasePage {
 
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div[2]/button")
     protected WebElement createvenuebttn;
-    
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[1]/div")
+    protected WebElement allvenuepage;
 
     //Create Session Elements
 
@@ -189,10 +191,14 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath=  "//*[text() =\"AutoSession 5\"]")
     protected WebElement newsession;
 
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[2]/div/div/div[1]/button")
+    protected WebElement sessionsuccessmsg;
+
     //Add Ticket to Session
 
 
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/form/section/div[2]/div/div[1]/ul/li[2]")
+
     protected  WebElement tickets;
 
 
@@ -252,12 +258,32 @@ public class RegistrationParticipantsPage extends BasePage {
     protected WebElement activitysavebutton;
 
 
+    // Create Room Type
+    @FindBy(id = "accommodation" )
+    protected WebElement accomodation;
+
+    @FindBy(xpath=  "//*[text() =\"Room Type\"]")
+    protected WebElement roomtype;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div/a")
+    protected WebElement addnewroomtypebttn;
+
+    @FindBy(id = "name")
+    protected WebElement roomname;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div/div[2]")
+    protected WebElement createroomtypebttn;
+
+
+
+
+
     public void CreateGroup() {
-        createdevent.click();
+    createdevent.click();
     registration.click();
     participants.click();
     creatgroupbttn.click();
-    groupname.sendKeys("AutoGroup 21");
+    groupname.sendKeys("AutoGroup 42");
     savebttn.click();
         // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
        //WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div[1]")));
@@ -270,18 +296,22 @@ public class RegistrationParticipantsPage extends BasePage {
 
     public void CreateUser(){
 
-        fname.sendKeys("AutoUser BA");
+        fname.sendKeys("AutoUser BQSS");
         lname.sendKeys("User");
-        email.sendKeys("auto@101AutoUserBA.com");
+        email.sendKeys("auto@101AutoUserBss.com");
         createuserbttn.click();
     }
     public void CreatePackage(){
+        //createdevent.click();
     eventconfig.click();
     packages.click();
     newpackagebttn.click();
-    packagetitle.sendKeys("AutoPackage 19");
-    packagepriority.sendKeys("19");
+    packagetitle.sendKeys("AutoPackage 37");
+    packagepriority.sendKeys("37");
     savepackagebttn.click();
+        WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element13 = wait13.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
+    sessionsuccessmsg.click();
    // driver.navigate().refresh();
 
 
@@ -299,7 +329,7 @@ public class RegistrationParticipantsPage extends BasePage {
         //eventconfig.click();
         tickettype.click();
         addticketbttn.click();
-        ticketname.sendKeys("AutoTicketType 2");
+        ticketname.sendKeys("AutoTicketType18");
         packagesdropdown.click();
         selectpackage.click();
         createticketbttn.click();
@@ -312,11 +342,14 @@ public class RegistrationParticipantsPage extends BasePage {
 
         //createdevent.click();
         //driver.navigate().refresh();
-        WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element3 = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() =\"Planning\"]")));
+        //WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(10));
+       //WebElement element3 = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() =\"Planning\"]")));
 
-       planning.click();
+        planning.click();
+        planning.click();
+        planning.click();
         venues.click();
+        venues.isSelected();
 
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement element4 = wait1.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text() =\"Add Venue\"]")));
@@ -324,11 +357,16 @@ public class RegistrationParticipantsPage extends BasePage {
         addvenue.click();
         venuetype.click();
         venuetypevalue.click();
-        venuename.sendKeys("AutoVenue 8");
-        venuecapacity.sendKeys("11");
-        WebDriverWait wait10 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element9 = wait9.until(ExpectedConditions.elementToBeClickable(createvenuebttn));
+        venuename.sendKeys("AutoVenue 15");
+        venuecapacity.sendKeys("15");
         createvenuebttn.click();
+        sessionsuccessmsg.click();
+        // driver.navigate().refresh();
+
+        //WebDriverWait wait10 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        //WebElement element9 = wait10.until(ExpectedConditions.elementToBeClickable( By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[1]/div")));
+
+        // By SuccessMessageLocator = By.xpath("");
 
         //locationsection.click();
         //location.sendKeys("Pyramids Gardens, Al Haram, Egypt");
@@ -341,7 +379,7 @@ public class RegistrationParticipantsPage extends BasePage {
     public void CreateSession(){
 
         //createdevent.click();  // to test separated , Comment if this test will be a part of the whole test
-        WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element3 = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() =\"Planning\"]")));
         //driver.navigate().refresh();
         //driver.navigate().to("https://dev-admin.blink.global/sessions/p/1");
@@ -359,22 +397,26 @@ public class RegistrationParticipantsPage extends BasePage {
        venue.click();
        sessionvenuetype.click();
        sessioncreatebttn.click();
+       sessionsuccessmsg.click();
+        //driver.navigate().refresh();
+        WebDriverWait wait12 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element7 = wait12.until(ExpectedConditions.visibilityOf(newsession));
+
        newsession.click();
 
     }
 
     public void CreateNewTicketInsideSession (){
-        /*  createdevent.click();  // to test separated , Comment if this test will be a part of the whole test
-        planning.click();      // to test separated , Comment if this test will be a part of the whole test
+        // createdevent.click();  // to test separated , Comment if this test will be a part of the whole test
+       /* planning.click();      // to test separated , Comment if this test will be a part of the whole test
         sessions.click();       // to test separated , Comment if this test will be a part of the whole test
         newsession.click();  */      // to test separated , Comment if this test will be a part of the whole test
         // driver.navigate().to("https://dev-admin.blink.global/sessions/41?tab=Tickets");
-        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element4 = wait4.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/form/section/div[2]/div/div[1]/ul/li[2]")));
-        planning.click();
-        planning.click();
-        sessions.click();
-        newsession.click();
+         WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(tickets));
+        //planning.click();
+        //sessions.click();
+        //newsession.click();
         tickets.click();
         sessionaddticket.click();
         ticketquantity.sendKeys("10");
@@ -396,6 +438,30 @@ public class RegistrationParticipantsPage extends BasePage {
         activityhtimezone.click();
         activitytimezonevalue.click();
         activitysavebutton.click();
+    }
+
+    public void CreateRoomType() {
+        // Createdevent element should be comment if you test the full happy path scenario , not commented if you test the method separetly
+        createdevent.click();
+        accomodation.click();
+        roomtype.click();
+        addnewroomtypebttn.click();
+        roomname.sendKeys("AutoRoom3");
+        createroomtypebttn.click();
+        WebDriverWait wait12 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element7 = wait12.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
+        sessionsuccessmsg.click();
+
+
+
+    }
+
+    public void CreateStayAndRoom() {
+        // Createdevent element should be comment if you test the full happy path scenario , not commented if you test the method separetly
+        createdevent.click();
+
+
+
     }
 
 }

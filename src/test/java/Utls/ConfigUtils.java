@@ -7,13 +7,13 @@ public class ConfigUtils {
     private static ConfigUtils configUtils;
 
     public ConfigUtils(){
-        String env= System.getProperty("env","PRODUCTION");
+        String env= System.getProperty("env","STG");
         switch (env){
-            case "PRODUCTION":
+            case "DEV":
                 properties = PropertiesUtils.loadProperties("src/test/java/Config/Dev_Env.properties");
                 break;
-            case "LOCAL" :
-                properties = PropertiesUtils.loadProperties("src/test/java/com/qacart/todo/config/local.properties");
+            case "STG" :
+                properties = PropertiesUtils.loadProperties("src/test/java/Config/STG.properties");
                 break;
             default:
                 throw new RuntimeException("Environment is not supported");
