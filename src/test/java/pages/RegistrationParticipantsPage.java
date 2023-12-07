@@ -458,6 +458,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
     public void CreateStayAndRoom() {
         // Createdevent element should be comment if you test the full happy path scenario , not commented if you test the method separetly
+       // createdevent.click();
         createdevent.click();
 
 
