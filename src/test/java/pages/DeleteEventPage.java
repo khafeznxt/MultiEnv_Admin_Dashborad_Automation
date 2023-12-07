@@ -17,33 +17,33 @@ public class DeleteEventPage extends BasePage {
     }
 
     // You should put here the event/s name/s and how many elements you want to delete [Note:Comment the element that you will not use ]
-     @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+     @FindBy(xpath=  "//*[text() =\"Automation Event  10\"]")
     protected WebElement createdevent1;
-    @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  9\"]")
     protected WebElement createdevent2;
 
-    @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  8\"]")
     protected WebElement createdevent3;
 
-    @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  7\"]")
     protected WebElement createdevent4;
 
-    @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  6\"]")
     protected WebElement createdevent5;
 
-    @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  5\"]")
     protected WebElement createdevent6;
 
-    @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  4\"]")
     protected WebElement createdevent7;
 
-    @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  3\"]")
     protected WebElement createdevent8;
 
-    @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  2\"]")
     protected WebElement createdevent9;
 
-    @FindBy(xpath=  "//*[text() =\"Automation Event  11\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  1\"]")
     protected WebElement createdevent10;
 
     // the end of the event elements which could be deleted , you can add more events elements to be deleted

@@ -29,7 +29,7 @@ public class AccommodationTest extends BaseTest {
         loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
 
         RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-        registrationParticipantsPage.CreateStayAndRoom();
+        registrationParticipantsPage.CreateStayAndAddRoom();
 
     }
 
