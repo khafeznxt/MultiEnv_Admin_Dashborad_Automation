@@ -26,7 +26,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
     @FindBy(id = "create-group")
     protected WebElement creatgroupbttn;
-    @FindBy(xpath=  "//*[text() =\"Automation Event  25\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  38\"]")
     protected WebElement createdevent;
 
     @FindBy(id=  "groupName")
@@ -35,7 +35,7 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath =  "//*[@id=\"portal\"]/div/div[3]/div/button[2]")
     protected WebElement savebttn;
 
-    @FindBy(xpath=  "//*[text() =\"AutoGroup 56\"]")
+    @FindBy(xpath=  "//*[text() =\"AutoGroup 65\"]")
     protected WebElement createdgroup;
 
 
@@ -229,7 +229,7 @@ public class RegistrationParticipantsPage extends BasePage {
     protected WebElement itinerary;
 
     @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div/div[2]/div[2]/div[3]/div[97]/div")
-    protected WebElement calender;
+    protected WebElement itinerarycalender;
 
     @FindBy(id = "activityTitle")
     protected  WebElement activitytitle;
@@ -344,7 +344,7 @@ public class RegistrationParticipantsPage extends BasePage {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
         WebElement element = wait.until(ExpectedConditions.visibilityOf(creatgroupbttn));
     creatgroupbttn.click();
-    groupname.sendKeys("AutoGroup 56");
+    groupname.sendKeys("AutoGroup 65");
     savebttn.click();
         // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
        //WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div[1]")));
@@ -357,9 +357,9 @@ public class RegistrationParticipantsPage extends BasePage {
 
     public void CreateUser(){
 
-        fname.sendKeys("AutoUser BSEAA");
+        fname.sendKeys("AutoUser BSAWQ");
         lname.sendKeys("User");
-        email.sendKeys("auto@101AutoUserBSEAA.com");
+        email.sendKeys("auto@101AutoUserBSEWQQQ.com");
         createuserbttn.click();
         WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement element13 = wait13.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
@@ -484,6 +484,7 @@ public class RegistrationParticipantsPage extends BasePage {
         //planning.click();
         //sessions.click();
         //newsession.click();
+        //sessionsuccessmsg.isSelected();
         tickets.click();
         sessionaddticket.click();
         ticketquantity.sendKeys("10");
@@ -497,7 +498,9 @@ public class RegistrationParticipantsPage extends BasePage {
 
         content.click();
         itinerary.click();
-        calender.click();
+        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(itinerarycalender));
+        itinerarycalender.click();
         activitytitle.sendKeys("AutoActivity 1");
         activityattire.sendKeys("formal");
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -512,14 +515,16 @@ public class RegistrationParticipantsPage extends BasePage {
        //createdevent.click();
         accomodation.click();
         roomtype.click();
+        WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element7 = wait15.until(ExpectedConditions.visibilityOf(addnewroomtypebttn));
         addnewroomtypebttn.click();
         roomname.sendKeys("AutoRoom4");
         WebDriverWait wait12 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element7 = wait12.until(ExpectedConditions.visibilityOf(packagedropdown));
+        WebElement element10 = wait12.until(ExpectedConditions.visibilityOf(packagedropdown));
         createroomtypebttn.click();
         //createroomtypebttn.isSelected();
-        WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element9 = wait15.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
+        WebDriverWait wait16 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element9 = wait16.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
         sessionsuccessmsg.click();
 
 
@@ -535,7 +540,7 @@ public class RegistrationParticipantsPage extends BasePage {
         WebDriverWait wait12 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element7 = wait12.until(ExpectedConditions.visibilityOf(createnewstaybttn));
         createnewstaybttn.click();
-        stayname.sendKeys("AutoStayKK");
+        stayname.sendKeys("AutoStayKKS");
         stars.click();
         starsvalue.click();
         createstaybttn.click();
