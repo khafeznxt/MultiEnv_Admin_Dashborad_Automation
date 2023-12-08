@@ -101,6 +101,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         registrationParticipantsPage.CreateActivityForAnEvent();
         registrationParticipantsPage.CreateRoomType();
         registrationParticipantsPage.CreateStayAndAddRoom();
+        registrationParticipantsPage.AddTripToTheParticipant();
 
     }
 

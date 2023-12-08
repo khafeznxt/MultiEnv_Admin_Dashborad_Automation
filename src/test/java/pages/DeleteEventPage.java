@@ -30,7 +30,7 @@ public class DeleteEventPage extends BasePage {
 
     @FindBy(xpath=  "//*[text() =\"Automation Event  5\"]")
     protected WebElement createdevent5;
-/*
+
     @FindBy(xpath=  "//*[text() =\"Automation Event  6\"]")
     protected WebElement createdevent6;
 
@@ -44,7 +44,7 @@ public class DeleteEventPage extends BasePage {
     protected WebElement createdevent9;
 
     @FindBy(xpath=  "//*[text() =\"Automation Event  2\"]")
-    protected WebElement createdevent10;*/
+    protected WebElement createdevent10;
 
     // the end of the event elements which could be deleted , you can add more events elements to be deleted
     @FindBy(xpath=  "//*[text() =\"Event Config\"]")
@@ -72,9 +72,8 @@ public class DeleteEventPage extends BasePage {
 
 
     public LoginPage DeleteEvent(){
-List<WebElement> events = List.of(new WebElement[]{createdevent1, createdevent2  , createdevent3,createdevent4,createdevent5 });
-        //,createdevent6, createdevent7  , createdevent8,createdevent9,createdevent10});
-for (WebElement element : events ){
+List<WebElement> events = List.of(new WebElement[]{createdevent1, createdevent2  , createdevent3,createdevent4,createdevent5 ,createdevent6, createdevent7  , createdevent8,createdevent9,createdevent10});
+    for (WebElement element : events ){
        element.click();
         eventconfig.click();
         eventinfo.click();
