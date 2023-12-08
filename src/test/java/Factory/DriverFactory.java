@@ -44,7 +44,7 @@ public class DriverFactory {
                 throw new RuntimeException("The Browser is Not Supported");
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
         return driver;
     }
 }
