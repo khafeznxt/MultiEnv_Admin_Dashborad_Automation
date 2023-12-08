@@ -27,7 +27,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
     @FindBy(id = "create-group")
     protected WebElement creatgroupbttn;
-    @FindBy(xpath=  "//*[text() =\"Automation Event  43\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  46\"]")
     protected WebElement createdevent;
 
     @FindBy(id=  "groupName")
@@ -36,7 +36,7 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath =  "//*[@id=\"portal\"]/div/div[3]/div/button[2]")
     protected WebElement savebttn;
 
-    @FindBy(xpath=  "//*[text() =\"AutoGroup 43\"]")
+    @FindBy(xpath=  "//*[text() =\"AutoGroup 46\"]")
     protected WebElement createdgroup;
 
 
@@ -135,7 +135,7 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"place_stack\"]/div[1]")
     protected WebElement chooseplace;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div[2]/button")
+    @FindBy(xpath=  "//*[text() =\"Create\"]")
     protected WebElement createvenuebttn;
 
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[1]/div")
@@ -397,7 +397,7 @@ public class RegistrationParticipantsPage extends BasePage {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
         WebElement element = wait.until(ExpectedConditions.visibilityOf(creatgroupbttn));
     creatgroupbttn.click();
-    groupname.sendKeys("AutoGroup 43");
+    groupname.sendKeys("AutoGroup 46");
     savebttn.click();
         // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
        //WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div[1]")));
@@ -410,9 +410,9 @@ public class RegistrationParticipantsPage extends BasePage {
 
     public void CreateUser(){
 
-        fname.sendKeys("AutoUser OKLM");
+        fname.sendKeys("AutoUser CDESC");
         lname.sendKeys("User");
-        email.sendKeys("auto@101AutoUserOKLM.com");
+        email.sendKeys("auto@101AutoUserCDESC.com");
         createuserbttn.click();
         WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement element13 = wait13.until(ExpectedConditions.elementToBeClickable(sessionsuccessmsg));
@@ -483,8 +483,8 @@ public class RegistrationParticipantsPage extends BasePage {
         venuename.sendKeys("AutoVenue 16");
         venuecapacity.sendKeys("15");
         createvenuebttn.click();
-        //sessionsuccessmsg.click();
-         driver.navigate().refresh();
+        sessionsuccessmsg.click();
+         //driver.navigate().refresh();
 
         //WebDriverWait wait10 = new WebDriverWait(driver, Duration.ofSeconds(20));
         //WebElement element9 = wait10.until(ExpectedConditions.elementToBeClickable( By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[1]/div")));
@@ -606,7 +606,7 @@ public class RegistrationParticipantsPage extends BasePage {
         WebDriverWait wait12 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element7 = wait12.until(ExpectedConditions.visibilityOf(createnewstaybttn));
         createnewstaybttn.click();
-        stayname.sendKeys("AutoStayZXASWQ");
+        stayname.sendKeys("AutoStayZSXZSX");
         stars.click();
         starsvalue.click();
         createstaybttn.click();

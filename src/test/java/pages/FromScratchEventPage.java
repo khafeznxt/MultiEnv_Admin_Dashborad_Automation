@@ -66,10 +66,10 @@ public class FromScratchEventPage extends BasePage {
 
         createvent.click();
         fromscratch.click();
-        eventname.sendKeys("Automation Event  43");
+        eventname.sendKeys("Automation Event  46");
         eventtype.click();
         typevalue.click();
-        eventslug.sendKeys("Autoevent43");
+        eventslug.sendKeys("Autoevent46");
         startdate.sendKeys("12022023");
         starttime.sendKeys("1200PM");
         endtime.sendKeys("0800PM");
