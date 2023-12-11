@@ -10,6 +10,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
+
+import java.io.File;
 import java.sql.Time;
 import java.time.Duration;
 
@@ -27,7 +32,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
     @FindBy(id = "create-group")
     protected WebElement creatgroupbttn;
-    @FindBy(xpath=  "//*[text() =\"Automation Event  46\"]")
+    @FindBy(xpath=  "//*[text() =\"Automation Event  47\"]")
     protected WebElement createdevent;
 
     @FindBy(id=  "groupName")
@@ -36,7 +41,7 @@ public class RegistrationParticipantsPage extends BasePage {
     @FindBy(xpath =  "//*[@id=\"portal\"]/div/div[3]/div/button[2]")
     protected WebElement savebttn;
 
-    @FindBy(xpath=  "//*[text() =\"AutoGroup 46\"]")
+    @FindBy(xpath=  "//*[text() =\"AutoGroup 47\"]")
     protected WebElement createdgroup;
 
 
@@ -44,6 +49,12 @@ public class RegistrationParticipantsPage extends BasePage {
     protected WebElement adduserbttn;
 
     // Add User Elements
+
+    File file = new File("./will-klinzman-oaCD9WYdNlU-unsplash.jpg");
+
+    @FindBy(id =  "Add-user")
+    protected WebElement adduserbttnoutgroup;
+
     @FindBy(id = "firstName")
     protected WebElement fname;
 
@@ -52,6 +63,17 @@ public class RegistrationParticipantsPage extends BasePage {
 
     @FindBy(id = "email")
     protected WebElement email;
+    @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div/div[1]/div/div/div[1]/div/button")
+    protected WebElement uploadphoto;
+
+    @FindBy(xpath = "//*[@id=\"portal\"]/div/div/div/div/div/div/div/span")
+    protected WebElement uploadbttn;
+
+
+    @FindBy(xpath = "//*[@id=\"portal\"]/div/div/div/div[3]/div/button[2]")
+    protected WebElement acceptuploadbttn;
+
+
 
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/section/div[2]/div/div/div[2]/button")
     protected WebElement createuserbttn;
@@ -397,7 +419,7 @@ public class RegistrationParticipantsPage extends BasePage {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
         WebElement element = wait.until(ExpectedConditions.visibilityOf(creatgroupbttn));
     creatgroupbttn.click();
-    groupname.sendKeys("AutoGroup 46");
+    groupname.sendKeys("AutoGroup 47");
     savebttn.click();
         // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
        //WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div[1]")));
@@ -408,11 +430,31 @@ public class RegistrationParticipantsPage extends BasePage {
 
     }
 
-    public void CreateUser(){
+    public void CreateUser() throws AWTException {
+        createdevent.click();
+        registration.click();
+        participants.click();
+        adduserbttnoutgroup.click();
+        // the above actions for the separated test
+        uploadphoto.click();
+        uploadbttn.click();
+        StringSelection stringSelection = new StringSelection("D:\\karim\\Automation Projects\\Blink_AutomationFrameWork\\files\\will-klinzman-oaCD9WYdNlU-unsplash.jpg");
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 
-        fname.sendKeys("AutoUser CDESC");
+        Robot robot = new Robot();
+        robot.delay(1000); // Introduce a delay for the file dialog to appear
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_V);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+        acceptuploadbttn.click();
+
+        fname.sendKeys("AutoUser CVBUII");
         lname.sendKeys("User");
-        email.sendKeys("auto@101AutoUserCDESC.com");
+        email.sendKeys("auto@101AutoUserCVUII.com");
         createuserbttn.click();
         WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement element13 = wait13.until(ExpectedConditions.elementToBeClickable(sessionsuccessmsg));
@@ -606,7 +648,7 @@ public class RegistrationParticipantsPage extends BasePage {
         WebDriverWait wait12 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element7 = wait12.until(ExpectedConditions.visibilityOf(createnewstaybttn));
         createnewstaybttn.click();
-        stayname.sendKeys("AutoStayZSXZSX");
+        stayname.sendKeys("AutoStayCVCVD");
         stars.click();
         starsvalue.click();
         createstaybttn.click();

@@ -8,6 +8,7 @@ import pages.FromScratchEventPage;
 import pages.LoginPage;
 import pages.RegistrationParticipantsPage;
 
+import java.awt.*;
 import java.time.Duration;
 
 @Test(priority = 1)
@@ -79,7 +80,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
 
 
     @Test(description = "Create Group , Add User and Package")
-    public void ShouldBeAbleToExecuteFullHappyPathScenario (){
+    public void ShouldBeAbleToExecuteFullHappyPathScenario () throws AWTException {
 
         FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
         fromScratchEventPage.load();
