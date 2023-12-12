@@ -10,7 +10,7 @@ public class ConfigUtils {
         String env= System.getProperty("env","DEV");
         switch (env){
             case "DEV":
-                properties = PropertiesUtils.loadProperties("src/test/java/Config/Dev_Env.properties");
+                properties = PropertiesUtils.loadProperties("src/test/java/Config/STG_Unity.properties");
                 break;
             case "STG" :
                 properties = PropertiesUtils.loadProperties("src/test/java/Config/STG.properties");
