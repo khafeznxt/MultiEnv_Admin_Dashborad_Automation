@@ -17,7 +17,7 @@ public class DeleteEventPage extends BasePage {
     }
 
     // You should put here the event/s name/s and how many elements you want to delete [Note:Comment the element that you will not use ]
-     @FindBy(xpath=  "//*[text() =\"Automation Event  1\"]")
+     @FindBy(xpath=  "//*[text() =\"Automated VMS Event\"]")
     protected WebElement createdevent1;
     @FindBy(xpath=  "//*[text() =\"Automation Event  2\"]")
     protected WebElement createdevent2;
@@ -72,9 +72,12 @@ public class DeleteEventPage extends BasePage {
 
 
     public LoginPage DeleteEvent(){
-List<WebElement> events = List.of(new WebElement[]{createdevent1, createdevent2  , createdevent3,createdevent4,createdevent5 ,createdevent6, createdevent7  , createdevent8,createdevent9,createdevent10});
+List<WebElement> events = List.of(new WebElement[]{createdevent1});
+      //  , createdevent2  , createdevent3,createdevent4,createdevent5 ,createdevent6, createdevent7  , createdevent8,createdevent9,createdevent10});
     for (WebElement element : events ){
        element.click();
+        WebDriverWait wait2 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element2 = wait2.until(ExpectedConditions.visibilityOf(eventconfig));
         eventconfig.click();
         eventinfo.click();
         edit.click();

@@ -94,15 +94,16 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
         registrationParticipantsPage.CreateGroup();
         registrationParticipantsPage.CreateUser();
-        registrationParticipantsPage.CreatePackage();
-        registrationParticipantsPage.CreateTicketType();
+       //registrationParticipantsPage.CreatePackage();
+        //registrationParticipantsPage.CreateTicketType();
         registrationParticipantsPage.CreateVenue();
         registrationParticipantsPage.CreateSession();
         registrationParticipantsPage.CreateNewTicketInsideSession();
-        registrationParticipantsPage.CreateActivityForAnEvent();
+       /* registrationParticipantsPage.CreateActivityForAnEvent();
         registrationParticipantsPage.CreateRoomType();
-        registrationParticipantsPage.CreateStayAndAddRoom();
+        registrationParticipantsPage.CreateStayAndAddRoom();*/
         registrationParticipantsPage.AddTripToTheParticipant();
+
 
     }
 

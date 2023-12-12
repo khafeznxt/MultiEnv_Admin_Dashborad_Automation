@@ -51,7 +51,7 @@ public class ContentItineraryPage extends BasePage {
     protected WebElement activitysavebutton;
 
     //to test this case separately
-    @FindBy(xpath=  "//*[text() =\"Karim Event_1\"]")
+    @FindBy(xpath=  "//*[text() =\"\"]")
     protected WebElement createdevent;
 
     @FindBy(xpath=  "//*[text() =\"TimeZone\"]")

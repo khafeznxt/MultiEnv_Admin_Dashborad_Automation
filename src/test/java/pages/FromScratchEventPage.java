@@ -5,6 +5,13 @@ import base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import javax.lang.model.element.Element;
+import java.time.Duration;
+import java.util.function.Function;
 
 public class FromScratchEventPage extends BasePage {
 
@@ -55,8 +62,30 @@ public class FromScratchEventPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div/section/div[2]/div/div[2]/button")
     protected WebElement createbtn;
 
-    @FindBy(xpath=  "//*[text() =\"karimevent_6\"]")
+
+
+    @FindBy(xpath=  "//*[text() =\"Event Info\"]")
+    protected WebElement eventinfo;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div[2]/div/div/button")
+    protected WebElement editevent;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div[2]/div/div/div[13]/div[1]/div/div/span")
+    protected WebElement advancedconfig;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div[2]/div/div/div[13]/div[2]/div/div[4]/div/div[2]/div/label/div")
+    protected WebElement vmstogglebttn;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div[2]/div/div[3]")
+    protected WebElement saveeventediting;
+    @FindBy(xpath=  "//*[text() =\"Event Config\"]")
+    protected WebElement eventconfig;
+    @FindBy(xpath=  "//*[text() =\"Automated VMS Event\"]")
     protected WebElement createdevent;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[2]/div/div/div[1]/button")
+    protected WebElement sessionsuccessmsg;
+
 
     public void load() {
         driver.get(ConfigUtils.getInstance().BaseUrl());
@@ -66,10 +95,10 @@ public class FromScratchEventPage extends BasePage {
 
         createvent.click();
         fromscratch.click();
-        eventname.sendKeys("Automation Event  47");
+        eventname.sendKeys("Automated VMS Event");
         eventtype.click();
         typevalue.click();
-        eventslug.sendKeys("Autoevent47");
+        eventslug.sendKeys("autovms");
         startdate.sendKeys("12022023");
         starttime.sendKeys("1200PM");
         endtime.sendKeys("0800PM");
@@ -78,7 +107,23 @@ public class FromScratchEventPage extends BasePage {
         timezone.click();
         timezonevalue.click();
         createbtn.click();
-        //createdevent.click();
+        createdevent.click();
+        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
+        sessionsuccessmsg.click();
+
+        eventconfig.click();
+        eventinfo.click();
+        WebDriverWait wait44 = new WebDriverWait(driver, Duration.ofSeconds(40));
+        WebElement element44 = wait44.until(ExpectedConditions.visibilityOf(editevent));
+        editevent.click();
+        WebDriverWait wait34 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element14 = wait34.until(ExpectedConditions.visibilityOf(typevalue));
+        advancedconfig.click();
+        WebDriverWait wait35 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element15 = wait35.until(ExpectedConditions.visibilityOf(vmstogglebttn));
+        vmstogglebttn.click();
+        saveeventediting.click();
 
 
     }
