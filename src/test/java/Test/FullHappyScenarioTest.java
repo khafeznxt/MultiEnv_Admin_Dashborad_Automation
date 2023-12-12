@@ -4,6 +4,7 @@ import Utls.ConfigUtils;
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
+import pages.DeleteEventPage;
 import pages.FromScratchEventPage;
 import pages.LoginPage;
 import pages.RegistrationParticipantsPage;
@@ -103,6 +104,8 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         registrationParticipantsPage.CreateRoomType();
         registrationParticipantsPage.CreateStayAndAddRoom();*/
         registrationParticipantsPage.AddTripToTheParticipant();
+        DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
+        deleteEventPage.DeleteEvent();
 
 
     }
