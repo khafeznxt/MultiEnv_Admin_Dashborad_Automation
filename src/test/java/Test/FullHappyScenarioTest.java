@@ -108,8 +108,8 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         registrationParticipantsPage.CreateRoomType();
         registrationParticipantsPage.CreateStayAndAddRoom();*/
         registrationParticipantsPage.AddTripToTheParticipant();
-        //DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
-        //deleteEventPage.DeleteEvent();
+        DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
+        deleteEventPage.DeleteEvent();
 
 
     }
