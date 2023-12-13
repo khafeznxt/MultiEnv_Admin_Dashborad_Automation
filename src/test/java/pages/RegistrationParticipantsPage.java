@@ -810,7 +810,7 @@ public class RegistrationParticipantsPage extends BasePage {
         confirmaddtripbttn.click();
         WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
-        sessionsuccessmsg.click();
+        //sessionsuccessmsg.click();
 
 
 

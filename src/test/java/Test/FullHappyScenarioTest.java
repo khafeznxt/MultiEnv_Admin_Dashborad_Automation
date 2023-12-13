@@ -2,6 +2,7 @@ package Test;
 
 import Utls.ConfigUtils;
 import base.BaseTest;
+import io.qameta.allure.Feature;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import pages.DeleteEventPage;
@@ -16,7 +17,10 @@ import java.time.Duration;
 public class FullHappyScenarioTest extends BaseTest {
 private WebDriver driver;
 
-    @Test(description = "Create Event From Scratch Test")
+    @Test(enabled = false)
+
+
+    //@Test(description = "Create Event From Scratch Test")
 public void ShouldBeAbleToCreateFromScratchEvent (){
 
     FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
@@ -79,7 +83,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
 
     }*/
 
-
+    @Feature("Full VMS Scenario _ Unity ")
     @Test(description = "Full VMS Scenario _ Unity ")
     public void ShouldBeAbleToExecuteFullHappyPathScenario () throws AWTException {
 

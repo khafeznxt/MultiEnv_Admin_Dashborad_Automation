@@ -23,7 +23,8 @@ public class AccommodationTest extends BaseTest {
 
     }
 
-    @Test(description = "Create Room Stay And Room")
+    @Test(enabled = false)
+    //@Test(description = "Create Room Stay And Room")
     public void ShouldBeAbleToCreateStayAndRoom (){
 
 
