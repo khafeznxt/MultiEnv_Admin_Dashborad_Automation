@@ -2,6 +2,7 @@ package pages;
 
 import Utls.ConfigUtils;
 import base.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -91,6 +92,7 @@ public class FromScratchEventPage extends BasePage {
         driver.get(ConfigUtils.getInstance().BaseUrl());
         //return this;
     }
+    @Step
     public void CreateEventFromScratch(){
 
         createvent.click();
@@ -110,9 +112,9 @@ public class FromScratchEventPage extends BasePage {
         createdevent.click();
         WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
-        sessionsuccessmsg.click();
-
-        eventconfig.click();
+        //sessionsuccessmsg.click();
+// Enable VMS
+       /* eventconfig.click();
         eventinfo.click();
         WebDriverWait wait44 = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement element44 = wait44.until(ExpectedConditions.visibilityOf(editevent));
@@ -123,7 +125,7 @@ public class FromScratchEventPage extends BasePage {
         WebDriverWait wait35 = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement element15 = wait35.until(ExpectedConditions.visibilityOf(vmstogglebttn));
         vmstogglebttn.click();
-        saveeventediting.click();
+        saveeventediting.click();*/
 
 
     }

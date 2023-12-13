@@ -67,6 +67,11 @@ public class DeleteEventPage extends BasePage {
 
     @FindBy(css = "[label=\"Delete Forever\"]" )
     protected WebElement deleteforeverbttn;
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[2]/div/div/div[1]/button")
+    protected WebElement sessionsuccessmsg;
+
+    @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div/section")
+    protected WebElement switcherpageheader;
 
 
 
@@ -85,8 +90,10 @@ List<WebElement> events = List.of(new WebElement[]{createdevent1});
         deletebttn.click();
         deletetxt.sendKeys("delete-event-permanently");
         deleteforeverbttn.click();
+        WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element13 = wait13.until(ExpectedConditions.elementToBeClickable(sessionsuccessmsg));
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-    WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"col-1\"]/div")));
+    WebElement element1 = wait.until(ExpectedConditions.visibilityOf(switcherpageheader));
 
 
 }

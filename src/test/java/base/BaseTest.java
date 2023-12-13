@@ -1,9 +1,19 @@
 package base;
 
 import Factory.DriverFactory;
+import io.qameta.allure.Allure;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 
 public class BaseTest {
     protected ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -24,9 +34,23 @@ public class BaseTest {
     }
 
 
-  /*  @AfterMethod
-    public void quite() {
+    @AfterMethod
+    public void quite(ITestResult result) {
+        String testCaseName = result.getMethod().getMethodName();
+        File destFile = new File("target" + File.separator + "Screenshots" + File.separator + testCaseName+".png");
+        TakeScreenShots(destFile);
 
-       getDriver().quit();
-    }*/
+        //getDriver().quit();
+    }
+
+    public void TakeScreenShots(File destFile) {
+        File file = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(file, destFile);
+            InputStream is = new FileInputStream(destFile);
+            Allure.addAttachment("screenshot", is);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package pages;
 
 import base.BasePage;
+import io.qameta.allure.Step;
 import org.apache.commons.compress.harmony.unpack200.bytecode.forms.SwitchForm;
 import org.bouncycastle.oer.Switch;
 import org.openqa.selenium.By;
@@ -462,7 +463,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
 
 
-
+    @Step
     public void CreateGroup() {
     //createdevent.click();
     //eventconfig.click();
@@ -486,6 +487,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
     }
 
+    @Step
     public void CreateUser() throws AWTException {
         // createdevent.click();
         registration.click();
@@ -521,6 +523,7 @@ public class RegistrationParticipantsPage extends BasePage {
         WebElement element18 = wait18.until(ExpectedConditions.elementToBeClickable(guestdetailbutton));
     }
 
+    @Step
     public void DeleteUser(){
         createdevent.click();
         registration.click();
@@ -542,7 +545,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
 
     }
-
+    @Step
     public void CreatePackage(){
         //createdevent.click();
     eventconfig.click();
@@ -558,6 +561,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
 
     }
+    @Step
     public void CreateTicketType(){
 
         //driver.navigate().refresh();
@@ -580,7 +584,7 @@ public class RegistrationParticipantsPage extends BasePage {
         sessionsuccessmsg.click();
 
     }
-
+    @Step
     public void CreateVenue(){
         //driver.navigate().to("https://dev-admin.blink.global/venues/p/1");
 
@@ -626,6 +630,7 @@ public class RegistrationParticipantsPage extends BasePage {
 
 
     }
+    @Step
     public void CreateSession(){
 
         //createdevent.click();  // to test separated , Comment if this test will be a part of the whole test
@@ -646,10 +651,6 @@ public class RegistrationParticipantsPage extends BasePage {
         //JavascriptExecutor js = (JavascriptExecutor) driver;
        // js.executeScript("arguments[0].scrollIntoView();", sessiondesc);
         driver.switchTo().frame("event_description_ifr");
-
-       // WebDriverWait wait27 = new WebDriverWait(driver, Duration.ofSeconds(40));
-      //WebElement element27 = wait27.until(ExpectedConditions.visibilityOf(sessiondesc));
-         //sessiondesc.click();
         sessiondesc.sendKeys("Testing If VMS works");
         driver.switchTo().defaultContent();
 
@@ -665,7 +666,7 @@ public class RegistrationParticipantsPage extends BasePage {
        newsession.click();
 
     }
-
+    @Step
     public void CreateNewTicketInsideSession (){
         /*createdevent.click();  // to test separated , Comment if this test will be a part of the whole test
        planning.click();      // to test separated , Comment if this test will be a part of the whole test
@@ -706,6 +707,8 @@ public class RegistrationParticipantsPage extends BasePage {
 
     }
 
+    @Step
+
     public void CreateActivityForAnEvent(){
 
         content.click();
@@ -721,7 +724,7 @@ public class RegistrationParticipantsPage extends BasePage {
         activitytimezonevalue.click();
         activitysavebutton.click();
     }
-
+    @Step
     public void CreateRoomType() {
         // Createdevent element should be comment if you test the full happy path scenario , not commented if you test the method separetly
        //createdevent.click();
@@ -743,6 +746,8 @@ public class RegistrationParticipantsPage extends BasePage {
 
 
     }
+
+    @Step
 
     public void CreateStayAndAddRoom() {
          //createdevent.click();
@@ -775,6 +780,8 @@ public class RegistrationParticipantsPage extends BasePage {
         createnewroombttn.click();
 
     }
+
+    @Step
 
     public void AddTripToTheParticipant(){
         createdevent.click();

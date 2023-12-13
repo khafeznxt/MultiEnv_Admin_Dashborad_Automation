@@ -80,7 +80,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
     }*/
 
 
-    @Test(description = "Create Group , Add User and Package")
+    @Test(description = "Full VMS Scenario _ Unity ")
     public void ShouldBeAbleToExecuteFullHappyPathScenario () throws AWTException {
 
         FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
@@ -104,8 +104,8 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         registrationParticipantsPage.CreateRoomType();
         registrationParticipantsPage.CreateStayAndAddRoom();*/
         registrationParticipantsPage.AddTripToTheParticipant();
-        DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
-        deleteEventPage.DeleteEvent();
+        //DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
+        //deleteEventPage.DeleteEvent();
 
 
     }
