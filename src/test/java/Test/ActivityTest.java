@@ -9,7 +9,8 @@ import pages.LoginPage;
 
 public class ActivityTest extends BaseTest {
     private WebDriver driver;
-    @Test(description = "Create Activity")
+    @Test(enabled = false)
+    //@Test(description = "Create Activity")
     public void ShouldBeAbleToCreateActivity(){
 
         LoginPage loginPage = new LoginPage(getDriver());

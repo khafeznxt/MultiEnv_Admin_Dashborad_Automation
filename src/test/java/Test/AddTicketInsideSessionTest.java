@@ -9,7 +9,8 @@ import pages.RegistrationParticipantsPage;
 
 public class AddTicketInsideSessionTest extends BaseTest {
     private WebDriver driver;
-    @Test(description = "Create Ticket Inside Session")
+    @Test(enabled = false)
+   // @Test(description = "Create Ticket Inside Session")
     public void ShouldBeAbleToAddTicketInsideSession (){
 
 

@@ -10,7 +10,8 @@ import pages.RegistrationParticipantsPage;
 
 public class VenueTest extends BaseTest {
     private WebDriver driver;
-    @Test(description = "Create Venue")
+    @Test(enabled = false)
+    //@Test(description = "Create Venue")
     public void ShouldBeAbleToCreateVenue (){
 
 

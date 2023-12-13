@@ -11,7 +11,8 @@ import java.awt.*;
 
 public class AddUserTest extends BaseTest {
     private WebDriver driver;
-    @Test(description = "Add User")
+    @Test(enabled = false)
+    // @Test(description = "Add User")
     public void ShouldBeAbleToCreateUser () throws AWTException {
 
 

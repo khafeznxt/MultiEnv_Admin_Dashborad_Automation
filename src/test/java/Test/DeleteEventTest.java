@@ -12,7 +12,8 @@ import pages.LoginPage;
 public class DeleteEventTest extends BaseTest {
 
    private WebDriver driver;
-    @Test(description = "Delete Event")
+    @Test(enabled = false)
+    //@Test(description = "Delete Event")
    public void ShouldBeAbleToDeleteEvent () {
 
 

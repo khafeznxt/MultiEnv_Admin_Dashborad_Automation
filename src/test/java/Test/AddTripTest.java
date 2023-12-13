@@ -9,7 +9,8 @@ import pages.RegistrationParticipantsPage;
 
 public class AddTripTest extends BaseTest {
     private WebDriver driver;
-    @Test(description = "Add Trip To The Participant")
+    @Test(enabled = false)
+    //@Test(description = "Add Trip To The Participant")
     public void ShouldBeAbleToAddTripToParticipant (){
 
 

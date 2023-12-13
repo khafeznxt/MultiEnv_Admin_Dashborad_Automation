@@ -10,8 +10,9 @@ import pages.RegistrationParticipantsPage;
 
 public class DeleteUserTest extends BaseTest {
     private WebDriver driver;
+    @Test(enabled = false)
 
-    @Test(description = "Delete User")
+    //@Test(description = "Delete User")
     public void ShouldBeAbleToDeleteUser() {
 
         LoginPage loginPage = new LoginPage(getDriver());

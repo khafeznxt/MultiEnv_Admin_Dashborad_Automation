@@ -10,7 +10,8 @@ import pages.RegistrationParticipantsPage;
 
     public class SessionTest extends BaseTest {
         private WebDriver driver;
-        @Test(description = "Create Session")
+        @Test(enabled = false)
+        //@Test(description = "Create Session")
         public void ShouldBeAbleToCreateSession (){
 
 

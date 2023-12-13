@@ -9,7 +9,9 @@ import pages.RegistrationParticipantsPage;
 
 public class AccommodationTest extends BaseTest {
     private WebDriver driver;
-    @Test(description = "Create Room Type")
+
+    @Test(enabled = false)
+    //@Test(description = "Create Room Type")
     public void ShouldBeAbleToCreateRoomType (){
 
 

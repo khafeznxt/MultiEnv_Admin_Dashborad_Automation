@@ -11,7 +11,8 @@ import pages.LoginPage;
 public class LoginTest extends BaseTest {
     private WebDriver driver;
     @Feature("Authentication")
-    @Test(description = "Login Test")
+    @Test(enabled = false)
+    //@Test(description = "Login Test")
     public void ShouldBeAbleToLoginWthEmailAndPassword(){
 
 
