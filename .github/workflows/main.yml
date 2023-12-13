@@ -10,7 +10,7 @@ jobs:
     runs-on: windows-latest
     steps:
        - uses: actions/checkout@v2
-       - uses: owner/repo@main
+       - uses: karimAdelhafez/Blink_Unity_MVS_Scenario
          with:
            java-version: "11"
            cache: maven
