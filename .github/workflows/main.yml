@@ -9,8 +9,8 @@ jobs:
   test:
     runs-on:
     steps:
-
-       - uses: actions/setup-java
+       - uses: actions/checkout@v2
+       
          with:
            java-version: "11"
            cache: maven
