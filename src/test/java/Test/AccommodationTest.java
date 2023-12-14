@@ -1,10 +1,10 @@
 package Test;
 
-import Utls.ConfigUtils;
+import Utls.ConfigUtilsStg;
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.LoginPage;
+import pages.LoginSTGPage;
 import pages.RegistrationParticipantsPage;
 
 public class AccommodationTest extends BaseTest {
@@ -15,8 +15,8 @@ public class AccommodationTest extends BaseTest {
     public void ShouldBeAbleToCreateRoomType (){
 
 
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
+        LoginSTGPage loginSTGPage = new LoginSTGPage(getDriver());
+        loginSTGPage.load().login(ConfigUtilsStg.getInstance().getusername(), ConfigUtilsStg.getInstance().getPassword());
 
         RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
         registrationParticipantsPage.CreateRoomType();
@@ -28,8 +28,8 @@ public class AccommodationTest extends BaseTest {
     public void ShouldBeAbleToCreateStayAndRoom (){
 
 
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
+        LoginSTGPage loginSTGPage = new LoginSTGPage(getDriver());
+        loginSTGPage.load().login(ConfigUtilsStg.getInstance().getusername(), ConfigUtilsStg.getInstance().getPassword());
 
         RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
         registrationParticipantsPage.CreateStayAndAddRoom();

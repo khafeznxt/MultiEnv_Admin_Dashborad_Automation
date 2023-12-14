@@ -1,10 +1,10 @@
 package Test;
 
-import Utls.ConfigUtils;
+import Utls.ConfigUtilsStg;
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.LoginPage;
+import pages.LoginSTGPage;
 import pages.RegistrationParticipantsPage;
 
 
@@ -15,8 +15,8 @@ import pages.RegistrationParticipantsPage;
         public void ShouldBeAbleToCreateSession (){
 
 
-            LoginPage loginPage = new LoginPage(getDriver());
-            loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
+            LoginSTGPage loginSTGPage = new LoginSTGPage(getDriver());
+            loginSTGPage.load().login(ConfigUtilsStg.getInstance().getusername(), ConfigUtilsStg.getInstance().getPassword());
 
             RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
             registrationParticipantsPage.CreateSession();

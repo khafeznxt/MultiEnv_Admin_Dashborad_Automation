@@ -1,11 +1,11 @@
 package Test;
 
-import Utls.ConfigUtils;
+import Utls.ConfigUtilsStg;
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import pages.ContentItineraryPage;
-import pages.LoginPage;
+import pages.LoginSTGPage;
 
 public class ActivityTest extends BaseTest {
     private WebDriver driver;
@@ -13,8 +13,8 @@ public class ActivityTest extends BaseTest {
     //@Test(description = "Create Activity")
     public void ShouldBeAbleToCreateActivity(){
 
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
+        LoginSTGPage loginSTGPage = new LoginSTGPage(getDriver());
+        loginSTGPage.load().login(ConfigUtilsStg.getInstance().getusername(), ConfigUtilsStg.getInstance().getPassword());
 
         ContentItineraryPage contentItineraryPage = new ContentItineraryPage(getDriver());
         contentItineraryPage.CreateItinerary();

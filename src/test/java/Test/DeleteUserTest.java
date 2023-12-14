@@ -1,11 +1,10 @@
 package Test;
 
-import Utls.ConfigUtils;
+import Utls.ConfigUtilsStg;
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.ContentItineraryPage;
-import pages.LoginPage;
+import pages.LoginSTGPage;
 import pages.RegistrationParticipantsPage;
 
 public class DeleteUserTest extends BaseTest {
@@ -15,8 +14,8 @@ public class DeleteUserTest extends BaseTest {
     //@Test(description = "Delete User")
     public void ShouldBeAbleToDeleteUser() {
 
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
+        LoginSTGPage loginSTGPage = new LoginSTGPage(getDriver());
+        loginSTGPage.load().login(ConfigUtilsStg.getInstance().getusername(), ConfigUtilsStg.getInstance().getPassword());
 
         RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
         registrationParticipantsPage.DeleteUser();

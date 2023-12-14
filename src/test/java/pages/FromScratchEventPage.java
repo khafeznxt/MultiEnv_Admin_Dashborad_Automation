@@ -1,18 +1,16 @@
 package pages;
 
-import Utls.ConfigUtils;
+import Utls.ConfigUtilsProd;
+import Utls.ConfigUtilsStg;
 import base.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.lang.model.element.Element;
 import java.time.Duration;
-import java.util.function.Function;
 
 public class FromScratchEventPage extends BasePage {
 
@@ -89,12 +87,19 @@ public class FromScratchEventPage extends BasePage {
 
 
     public void load() {
-        driver.get(ConfigUtils.getInstance().BaseUrl());
+        driver.get(ConfigUtilsStg.getInstance().BaseUrl());
+        //return this;
+    }
+
+    public void loadprod() {
+        driver.get(ConfigUtilsProd.getInstance().BaseUrl());
         //return this;
     }
     @Step
     public void CreateEventFromScratch(){
 
+        WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(50));
+        WebElement element5 = wait5.until(ExpectedConditions.visibilityOf(createvent));
         createvent.click();
         fromscratch.click();
         eventname.sendKeys("Automated VMS Event");
@@ -114,7 +119,7 @@ public class FromScratchEventPage extends BasePage {
         WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
         //sessionsuccessmsg.click();
 // Enable VMS
-       /* eventconfig.click();
+        eventconfig.click();
         eventinfo.click();
         WebDriverWait wait44 = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement element44 = wait44.until(ExpectedConditions.visibilityOf(editevent));
@@ -125,7 +130,7 @@ public class FromScratchEventPage extends BasePage {
         WebDriverWait wait35 = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement element15 = wait35.until(ExpectedConditions.visibilityOf(vmstogglebttn));
         vmstogglebttn.click();
-        saveeventediting.click();*/
+        saveeventediting.click();
 
 
     }

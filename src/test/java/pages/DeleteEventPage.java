@@ -1,7 +1,6 @@
 package pages;
 
 import base.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -76,7 +75,7 @@ public class DeleteEventPage extends BasePage {
 
 
 
-    public LoginPage DeleteEvent(){
+    public LoginSTGPage DeleteEvent(){
 List<WebElement> events = List.of(new WebElement[]{createdevent1});
       //  , createdevent2  , createdevent3,createdevent4,createdevent5 ,createdevent6, createdevent7  , createdevent8,createdevent9,createdevent10});
     for (WebElement element : events ){
@@ -98,6 +97,6 @@ List<WebElement> events = List.of(new WebElement[]{createdevent1});
 
 }
 
-        return new LoginPage(driver);
+        return new LoginSTGPage(driver);
     }
 }

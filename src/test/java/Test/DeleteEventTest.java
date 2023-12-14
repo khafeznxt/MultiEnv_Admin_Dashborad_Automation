@@ -1,24 +1,24 @@
 package Test;
 
-import Utls.ConfigUtils;
+import Utls.ConfigUtilsStg;
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import pages.DeleteEventPage;
-import pages.LoginPage;
+import pages.LoginSTGPage;
 
 
 @Test(priority = 2)
 public class DeleteEventTest extends BaseTest {
 
    private WebDriver driver;
-    @Test(enabled = false)
+    @Test(enabled = true)
     //@Test(description = "Delete Event")
    public void ShouldBeAbleToDeleteEvent () {
 
 
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
+        LoginSTGPage loginSTGPage = new LoginSTGPage(getDriver());
+        loginSTGPage.load().login(ConfigUtilsStg.getInstance().getusername(), ConfigUtilsStg.getInstance().getPassword());
 
         DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
         deleteEventPage.DeleteEvent();
