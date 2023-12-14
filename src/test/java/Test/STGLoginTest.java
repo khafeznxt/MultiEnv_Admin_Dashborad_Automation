@@ -1,11 +1,11 @@
 package Test;
 
-import Utls.ConfigUtilsStg;
+import Utls.UnityConfigUtilsStg;
 import base.BaseTest;
 import io.qameta.allure.Feature;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.LoginSTGPage;
+import pages.UnityLoginSTGPage;
 
 
 public class STGLoginTest extends BaseTest {
@@ -16,11 +16,11 @@ public class STGLoginTest extends BaseTest {
     public void ShouldBeAbleToLoginWthEmailAndPassword(){
 
 
-        LoginSTGPage loginSTGPage = new LoginSTGPage(getDriver());
+        UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
 
-                loginSTGPage
+                unityLoginSTGPage
                         .load()
-                        .login(ConfigUtilsStg.getInstance().getusername(), ConfigUtilsStg.getInstance().getPassword());
+                        .login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
 
 

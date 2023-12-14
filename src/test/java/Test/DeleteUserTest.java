@@ -1,11 +1,11 @@
 package Test;
 
-import Utls.ConfigUtilsStg;
+import Utls.UnityConfigUtilsStg;
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.LoginSTGPage;
-import pages.RegistrationParticipantsPage;
+import pages.UnityLoginSTGPage;
+import pages.FullHappyPathPage;
 
 public class DeleteUserTest extends BaseTest {
     private WebDriver driver;
@@ -14,11 +14,11 @@ public class DeleteUserTest extends BaseTest {
     //@Test(description = "Delete User")
     public void ShouldBeAbleToDeleteUser() {
 
-        LoginSTGPage loginSTGPage = new LoginSTGPage(getDriver());
-        loginSTGPage.load().login(ConfigUtilsStg.getInstance().getusername(), ConfigUtilsStg.getInstance().getPassword());
+        UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
+        unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-        registrationParticipantsPage.DeleteUser();
+        FullHappyPathPage fullHappyPathPage = new FullHappyPathPage(getDriver());
+        fullHappyPathPage.DeleteUser();
 
     }
 }

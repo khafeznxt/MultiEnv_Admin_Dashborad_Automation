@@ -1,7 +1,9 @@
 package pages;
 
-import Utls.ConfigUtilsProd;
-import Utls.ConfigUtilsStg;
+import Utls.BlinkConfigUtilsDEV;
+import Utls.BlinkConfigUtilsSTG;
+import Utls.UnityConfigUtilsProd;
+import Utls.UnityConfigUtilsStg;
 import base.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
@@ -87,13 +89,22 @@ public class FromScratchEventPage extends BasePage {
 
 
     public void load() {
-        driver.get(ConfigUtilsStg.getInstance().BaseUrl());
+        driver.get(UnityConfigUtilsStg.getInstance().BaseUrl());
         //return this;
     }
 
     public void loadprod() {
-        driver.get(ConfigUtilsProd.getInstance().BaseUrl());
+        driver.get(UnityConfigUtilsProd.getInstance().BaseUrl());
         //return this;
+    }
+    public BlinkLoginDEVPage loadBlinkDev() {
+        driver.get(BlinkConfigUtilsDEV.getInstance().BaseUrl());
+        return this.loadBlinkDev();
+    }
+
+    public BlinkLoginSTGPage loadBlinkSTG() {
+        driver.get(BlinkConfigUtilsSTG.getInstance().BaseUrl());
+        return this.loadBlinkSTG();
     }
     @Step
     public void CreateEventFromScratch(){

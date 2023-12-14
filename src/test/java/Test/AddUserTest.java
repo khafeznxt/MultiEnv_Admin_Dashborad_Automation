@@ -1,11 +1,11 @@
 package Test;
 
-import Utls.ConfigUtilsStg;
+import Utls.UnityConfigUtilsStg;
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.LoginSTGPage;
-import pages.RegistrationParticipantsPage;
+import pages.UnityLoginSTGPage;
+import pages.FullHappyPathPage;
 
 import java.awt.*;
 
@@ -16,11 +16,11 @@ public class AddUserTest extends BaseTest {
     public void ShouldBeAbleToCreateUser () throws AWTException {
 
 
-        LoginSTGPage loginSTGPage = new LoginSTGPage(getDriver());
-        loginSTGPage.load().login(ConfigUtilsStg.getInstance().getusername(), ConfigUtilsStg.getInstance().getPassword());
+        UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
+        unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-        registrationParticipantsPage.CreateUser();
+        FullHappyPathPage fullHappyPathPage = new FullHappyPathPage(getDriver());
+        fullHappyPathPage.CreateUser();
 
     }
 
