@@ -6,6 +6,7 @@ import base.BaseTest;
 import io.qameta.allure.Feature;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
+import pages.DeleteEventPage;
 import pages.FromScratchEventPage;
 import pages.LoginProductionPage;
 import pages.RegistrationParticipantsPage;
@@ -94,7 +95,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
 
         // remove the comment to create new event for the full happypath scenario
         fromScratchEventPage.CreateEventFromScratch();
-
+        //fromScratchEventPage.EnableVms();
         RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
         registrationParticipantsPage.CreateGroup();
         registrationParticipantsPage.CreateUser();
@@ -107,8 +108,8 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         registrationParticipantsPage.CreateRoomType();
         registrationParticipantsPage.CreateStayAndAddRoom();*/
         registrationParticipantsPage.AddTripToTheParticipant();
-        //DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
-        //deleteEventPage.DeleteEvent();
+        DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
+        deleteEventPage.DeleteEvent();
 
 
     }

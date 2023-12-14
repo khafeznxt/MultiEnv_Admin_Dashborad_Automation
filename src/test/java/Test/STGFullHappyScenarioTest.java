@@ -93,7 +93,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
 
         // remove the comment to create new event for the full happypath scenario
         fromScratchEventPage.CreateEventFromScratch();
-
+        fromScratchEventPage.EnableVms();
         RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
         registrationParticipantsPage.CreateGroup();
         registrationParticipantsPage.CreateUser();

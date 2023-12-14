@@ -119,6 +119,23 @@ public class FromScratchEventPage extends BasePage {
         WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
         //sessionsuccessmsg.click();
 // Enable VMS
+       /* eventconfig.click();
+        eventinfo.click();
+        WebDriverWait wait44 = new WebDriverWait(driver, Duration.ofSeconds(40));
+        WebElement element44 = wait44.until(ExpectedConditions.visibilityOf(editevent));
+        editevent.click();
+        WebDriverWait wait34 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element14 = wait34.until(ExpectedConditions.visibilityOf(typevalue));
+        advancedconfig.click();
+        WebDriverWait wait35 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element15 = wait35.until(ExpectedConditions.visibilityOf(vmstogglebttn));
+        vmstogglebttn.click();
+        saveeventediting.click();*/
+
+
+    }
+
+    public void EnableVms(){
         eventconfig.click();
         eventinfo.click();
         WebDriverWait wait44 = new WebDriverWait(driver, Duration.ofSeconds(40));

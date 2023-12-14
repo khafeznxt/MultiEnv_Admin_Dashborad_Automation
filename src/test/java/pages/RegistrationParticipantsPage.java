@@ -797,7 +797,7 @@ public class RegistrationParticipantsPage extends BasePage {
         //tripinfo.click();
         addtripbttn.click();
         trippackages.click();
-        trippackagesvalue.click();
+        //trippackagesvalue.click();
         tripcreatedsession.click();
         assignticket.click();
         assignticket.isSelected();
