@@ -594,13 +594,16 @@ public class RegistrationParticipantsPage extends BasePage {
        //WebElement element3 = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() =\"Planning\"]")));
         //sessionsuccessmsg.click();
         //sessionsuccessmsg.isSelected();
-    eventconfig.click();
-        driver.navigate().refresh();
-
+        WebDriverWait wait22 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element22 = wait22.until(ExpectedConditions.visibilityOf(eventconfig));
+        eventconfig.click();
+        //driver.navigate().refresh();
+        WebDriverWait wait23 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element23 = wait23.until(ExpectedConditions.visibilityOf(planning));
         planning.click();
 
         venues.click();
-        venues.click();
+        //venues.click();
         venues.isSelected();
 
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
