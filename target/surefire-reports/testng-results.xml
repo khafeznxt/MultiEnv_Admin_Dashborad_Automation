@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="11" total="19" passed="0" failed="8" skipped="0">
+<testng-results ignored="14" total="19" passed="0" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-15T05:01:37 EET" name="Surefire suite" finished-at="2023-12-15T05:03:01 EET" duration-ms="84232">
+  <suite started-at="2023-12-15T05:58:56 EET" name="Surefire suite" finished-at="2023-12-15T06:00:17 EET" duration-ms="81294">
     <groups>
     </groups>
-    <test started-at="2023-12-15T05:01:37 EET" name="Surefire test" finished-at="2023-12-15T05:03:01 EET" duration-ms="84232">
-      <class name="Test.UnitySTGFullHappyScenarioTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Test.UnitySTGFullHappyScenarioTest@57b9e423]" started-at="2023-12-15T05:01:45 EET" name="Setup" finished-at="2023-12-15T05:01:47 EET" duration-ms="2853" status="PASS">
+    <test started-at="2023-12-15T05:58:56 EET" name="Surefire test" finished-at="2023-12-15T06:00:17 EET" duration-ms="81294">
+      <class name="TestScenarios.UnitySTGFullHappyScenarioTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:TestScenarios.UnitySTGFullHappyScenarioTest@6dd93a21]" started-at="2023-12-15T05:59:21 EET" name="Setup" finished-at="2023-12-15T05:59:22 EET" duration-ms="1085" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.UnitySTGFullHappyScenarioTest@57b9e423]" started-at="2023-12-15T05:01:47 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full VMS Scenario _ Unity " finished-at="2023-12-15T05:03:01 EET" duration-ms="73700" status="FAIL">
+        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:TestScenarios.UnitySTGFullHappyScenarioTest@6dd93a21]" started-at="2023-12-15T05:59:22 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full VMS Scenario _ Unity STG" finished-at="2023-12-15T06:00:17 EET" duration-ms="55442" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchWindowException">
             <message>
               <![CDATA[no such window: target window already closed
@@ -20,9 +20,9 @@ from unknown error: web view not found
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48a223b4ecf7e1e67f95c922a8c843ea, findElement {using=xpath, value=//*[text() ="Add Venue"]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56490}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56490/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48a223b4ecf7e1e67f95c922a8c843ea]]>
+Command: [05eafb7340395b9663c006ac79653649, findElement {using=id, value=create-group}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59714}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59714/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05eafb7340395b9663c006ac79653649]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
@@ -31,9 +31,9 @@ from unknown error: web view not found
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48a223b4ecf7e1e67f95c922a8c843ea, findElement {using=xpath, value=//*[text() ="Add Venue"]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56490}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56490/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48a223b4ecf7e1e67f95c922a8c843ea
+Command: [05eafb7340395b9663c006ac79653649, findElement {using=id, value=create-group}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59714}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59714/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05eafb7340395b9663c006ac79653649
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -57,8 +57,8 @@ at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditi
 at java.base/java.lang.StringConcatHelper.stringOf(StringConcatHelper.java:467)
 at java.base/java.lang.StringConcatHelper.simpleConcat(StringConcatHelper.java:422)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:226)
-at pages.FullHappyPathPage.CreateVenue(FullHappyPathPage.java:609)
-at Test.UnitySTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(UnitySTGFullHappyScenarioTest.java:102)
+at pages.FullHappyPathPage.CreateGroup(FullHappyPathPage.java:470)
+at TestScenarios.UnitySTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(UnitySTGFullHappyScenarioTest.java:98)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -78,11 +78,11 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ShouldBeAbleToExecuteFullHappyPathScenario -->
-        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:Test.UnitySTGFullHappyScenarioTest@57b9e423]" started-at="2023-12-15T05:03:01 EET" name="quite" finished-at="2023-12-15T05:03:01 EET" duration-ms="5" status="FAIL">
+        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:TestScenarios.UnitySTGFullHappyScenarioTest@6dd93a21]" started-at="2023-12-15T06:00:17 EET" name="quite" finished-at="2023-12-15T06:00:17 EET" duration-ms="2" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=UnitySTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.UnitySTGFullHappyScenarioTest@57b9e423] output={null}]]]>
+                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=UnitySTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:TestScenarios.UnitySTGFullHappyScenarioTest@6dd93a21] output={null}]]]>
               </value>
             </param>
           </params>
@@ -94,9 +94,9 @@ from unknown error: web view not found
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48a223b4ecf7e1e67f95c922a8c843ea, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56490}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56490/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48a223b4ecf7e1e67f95c922a8c843ea]]>
+Command: [05eafb7340395b9663c006ac79653649, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59714}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59714/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05eafb7340395b9663c006ac79653649]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
@@ -105,9 +105,9 @@ from unknown error: web view not found
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [48a223b4ecf7e1e67f95c922a8c843ea, screenshot {}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56490}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56490/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48a223b4ecf7e1e67f95c922a8c843ea
+Command: [05eafb7340395b9663c006ac79653649, screenshot {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59714}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59714/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 05eafb7340395b9663c006ac79653649
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -147,105 +147,35 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quite -->
-      </class> <!-- Test.UnitySTGFullHappyScenarioTest -->
-      <class name="Test.BlinkPRODFullHappyScenarioTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Test.BlinkPRODFullHappyScenarioTest@7a799159]" started-at="2023-12-15T05:01:37 EET" name="Setup" finished-at="2023-12-15T05:01:44 EET" duration-ms="6566" status="PASS">
+      </class> <!-- TestScenarios.UnitySTGFullHappyScenarioTest -->
+      <class name="TestScenarios.BlinkDEVFullHappyScenarioTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:TestScenarios.BlinkDEVFullHappyScenarioTest@6ff37443]" started-at="2023-12-15T05:58:57 EET" name="Setup" finished-at="2023-12-15T05:59:02 EET" duration-ms="5099" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.BlinkPRODFullHappyScenarioTest@7a799159]" started-at="2023-12-15T05:01:44 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full Scenario on Blink DEV Environment " finished-at="2023-12-15T05:01:48 EET" duration-ms="3950" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidArgumentException">
-            <message>
-              <![CDATA[invalid argument
-  (Session info: chrome=119.0.6045.160)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [835a662a763e40383bf949504cddfe96, get {url=}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56399}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56399/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 835a662a763e40383bf949504cddfe96]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidArgumentException: invalid argument
-  (Session info: chrome=119.0.6045.160)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [835a662a763e40383bf949504cddfe96, get {url=}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56399}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56399/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 835a662a763e40383bf949504cddfe96
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
-at pages.BlinkLoginPRODPage.loadBlinkPROD(BlinkLoginPRODPage.java:76)
-at Test.BlinkPRODFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(BlinkPRODFullHappyScenarioTest.java:92)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ShouldBeAbleToExecuteFullHappyPathScenario -->
-        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:Test.BlinkPRODFullHappyScenarioTest@7a799159]" started-at="2023-12-15T05:01:48 EET" name="quite" finished-at="2023-12-15T05:01:48 EET" duration-ms="572" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=BlinkPRODFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.BlinkPRODFullHappyScenarioTest@7a799159] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quite -->
-      </class> <!-- Test.BlinkPRODFullHappyScenarioTest -->
-      <class name="Test.BlinkSTGFullHappyScenarioTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Test.BlinkSTGFullHappyScenarioTest@40ab8a8]" started-at="2023-12-15T05:01:37 EET" name="Setup" finished-at="2023-12-15T05:01:44 EET" duration-ms="6557" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.BlinkSTGFullHappyScenarioTest@40ab8a8]" started-at="2023-12-15T05:01:44 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full Scenario on Blink STG Environment " finished-at="2023-12-15T05:01:59 EET" duration-ms="15292" status="FAIL">
+        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:TestScenarios.BlinkDEVFullHappyScenarioTest@6ff37443]" started-at="2023-12-15T05:59:02 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full Scenario on Blink DEV Environment" finished-at="2023-12-15T05:59:21 EET" duration-ms="19480" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[3]/button"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="root"]/div[1]/div[5]/main/div/div/div/div[1]/div[2]/div[2]/div[2]/div[2]/select"}
   (Session info: chrome=119.0.6045.160)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4eb3a4bb7e1b79d5ed7bc980588e526f, findElement {using=xpath, value=//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[3]/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56390}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56390/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4eb3a4bb7e1b79d5ed7bc980588e526f]]>
+Command: [31590f556096e51389a6431f5eacad77, findElement {using=xpath, value=//*[@id="root"]/div[1]/div[5]/main/div/div/div/div[1]/div[2]/div[2]/div[2]/div[2]/select}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59591}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59591/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31590f556096e51389a6431f5eacad77]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[3]/button"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="root"]/div[1]/div[5]/main/div/div/div/div[1]/div[2]/div[2]/div[2]/div[2]/select"}
   (Session info: chrome=119.0.6045.160)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4eb3a4bb7e1b79d5ed7bc980588e526f, findElement {using=xpath, value=//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[3]/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56390}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56390/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4eb3a4bb7e1b79d5ed7bc980588e526f
+Command: [31590f556096e51389a6431f5eacad77, findElement {using=xpath, value=//*[@id="root"]/div[1]/div[5]/main/div/div/div/div[1]/div[2]/div[2]/div[2]/div[2]/select}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59591}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59591/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 31590f556096e51389a6431f5eacad77
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -263,8 +193,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at pages.BlinkLoginSTGPage.login(BlinkLoginSTGPage.java:85)
-at Test.BlinkSTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(BlinkSTGFullHappyScenarioTest.java:94)
+at pages.FromScratchEventPage.CreateEventFromScratch(FromScratchEventPage.java:117)
+at TestScenarios.BlinkDEVFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(BlinkDEVFullHappyScenarioTest.java:94)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -284,94 +214,24 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ShouldBeAbleToExecuteFullHappyPathScenario -->
-        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:Test.BlinkSTGFullHappyScenarioTest@40ab8a8]" started-at="2023-12-15T05:01:59 EET" name="quite" finished-at="2023-12-15T05:01:59 EET" duration-ms="372" status="PASS">
+        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:TestScenarios.BlinkDEVFullHappyScenarioTest@6ff37443]" started-at="2023-12-15T05:59:21 EET" name="quite" finished-at="2023-12-15T05:59:21 EET" duration-ms="239" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=BlinkSTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.BlinkSTGFullHappyScenarioTest@40ab8a8] output={null}]]]>
+                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=BlinkDEVFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:TestScenarios.BlinkDEVFullHappyScenarioTest@6ff37443] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quite -->
-      </class> <!-- Test.BlinkSTGFullHappyScenarioTest -->
-      <class name="Test.UnityProdFullHappyScenarioTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Test.UnityProdFullHappyScenarioTest@6dd93a21]" started-at="2023-12-15T05:01:37 EET" name="Setup" finished-at="2023-12-15T05:01:44 EET" duration-ms="6503" status="PASS">
+      </class> <!-- TestScenarios.BlinkDEVFullHappyScenarioTest -->
+      <class name="TestCases.DeleteEventTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:TestCases.DeleteEventTest@76911385]" started-at="2023-12-15T05:58:57 EET" name="Setup" finished-at="2023-12-15T05:59:02 EET" duration-ms="5113" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.UnityProdFullHappyScenarioTest@6dd93a21]" started-at="2023-12-15T05:01:44 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full VMS Scenario _ Unity " finished-at="2023-12-15T05:01:44 EET" duration-ms="499" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidArgumentException">
-            <message>
-              <![CDATA[invalid argument
-  (Session info: chrome=119.0.6045.160)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7f7587ebd7b7e0c7cc2b924a2b8287b3, get {url=}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56395}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56395/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7f7587ebd7b7e0c7cc2b924a2b8287b3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidArgumentException: invalid argument
-  (Session info: chrome=119.0.6045.160)
-Build info: version: '4.15.0', revision: '1d14b5521b'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7f7587ebd7b7e0c7cc2b924a2b8287b3, get {url=}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56395}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56395/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7f7587ebd7b7e0c7cc2b924a2b8287b3
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:309)
-at pages.FromScratchEventPage.loadprod(FromScratchEventPage.java:97)
-at Test.UnityProdFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(UnityProdFullHappyScenarioTest.java:91)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ShouldBeAbleToExecuteFullHappyPathScenario -->
-        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:Test.UnityProdFullHappyScenarioTest@6dd93a21]" started-at="2023-12-15T05:01:44 EET" name="quite" finished-at="2023-12-15T05:01:45 EET" duration-ms="443" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=UnityProdFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.UnityProdFullHappyScenarioTest@6dd93a21] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quite -->
-      </class> <!-- Test.UnityProdFullHappyScenarioTest -->
-      <class name="Test.DeleteEventTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Test.DeleteEventTest@6ff37443]" started-at="2023-12-15T05:01:37 EET" name="Setup" finished-at="2023-12-15T05:01:44 EET" duration-ms="6482" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="ShouldBeAbleToDeleteEvent()[pri:0, instance:Test.DeleteEventTest@6ff37443]" started-at="2023-12-15T05:01:44 EET" name="ShouldBeAbleToDeleteEvent" finished-at="2023-12-15T05:02:00 EET" duration-ms="16784" status="FAIL">
+        <test-method signature="ShouldBeAbleToDeleteEvent()[pri:0, instance:TestCases.DeleteEventTest@76911385]" started-at="2023-12-15T05:59:02 EET" name="ShouldBeAbleToDeleteEvent" finished-at="2023-12-15T05:59:21 EET" duration-ms="18832" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() ="Automated VMS Event"]"}
@@ -380,9 +240,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3cfb7a252d13a15497b5a73f95260cc5, findElement {using=xpath, value=//*[text() ="Automated VMS Event"]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56397}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56397/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3cfb7a252d13a15497b5a73f95260cc5]]>
+Command: [f6bef0cdf26fdbb6dbb97983986a0b4f, findElement {using=xpath, value=//*[text() ="Automated VMS Event"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59590}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59590/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f6bef0cdf26fdbb6dbb97983986a0b4f]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() ="Automated VMS Event"]"}
@@ -391,9 +251,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3cfb7a252d13a15497b5a73f95260cc5, findElement {using=xpath, value=//*[text() ="Automated VMS Event"]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56397}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56397/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3cfb7a252d13a15497b5a73f95260cc5
+Command: [f6bef0cdf26fdbb6dbb97983986a0b4f, findElement {using=xpath, value=//*[text() ="Automated VMS Event"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59590}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59590/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f6bef0cdf26fdbb6dbb97983986a0b4f
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -412,7 +272,7 @@ at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(Def
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
 at pages.DeleteEventPage.DeleteEvent(DeleteEventPage.java:82)
-at Test.DeleteEventTest.ShouldBeAbleToDeleteEvent(DeleteEventTest.java:24)
+at TestCases.DeleteEventTest.ShouldBeAbleToDeleteEvent(DeleteEventTest.java:24)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -432,71 +292,24 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ShouldBeAbleToDeleteEvent -->
-        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:Test.DeleteEventTest@6ff37443]" started-at="2023-12-15T05:02:01 EET" name="quite" finished-at="2023-12-15T05:02:01 EET" duration-ms="447" status="PASS">
+        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:TestCases.DeleteEventTest@76911385]" started-at="2023-12-15T05:59:21 EET" name="quite" finished-at="2023-12-15T05:59:21 EET" duration-ms="345" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ShouldBeAbleToDeleteEvent status=FAILURE method=DeleteEventTest.ShouldBeAbleToDeleteEvent()[pri:0, instance:Test.DeleteEventTest@6ff37443] output={null}]]]>
+                <![CDATA[[TestResult name=ShouldBeAbleToDeleteEvent status=FAILURE method=DeleteEventTest.ShouldBeAbleToDeleteEvent()[pri:0, instance:TestCases.DeleteEventTest@76911385] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quite -->
-      </class> <!-- Test.DeleteEventTest -->
-      <class name="Test.SporticoPRODFullHappyScenarioTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Test.SporticoPRODFullHappyScenarioTest@21719a0]" started-at="2023-12-15T05:01:37 EET" name="Setup" finished-at="2023-12-15T05:01:44 EET" duration-ms="6563" status="PASS">
+      </class> <!-- TestCases.DeleteEventTest -->
+      <class name="TestScenarios.BlinkSTGFullHappyScenarioTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:TestScenarios.BlinkSTGFullHappyScenarioTest@53093491]" started-at="2023-12-15T05:58:57 EET" name="Setup" finished-at="2023-12-15T05:59:02 EET" duration-ms="5090" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.SporticoPRODFullHappyScenarioTest@21719a0]" started-at="2023-12-15T05:01:44 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full Scenario on Sportico PROD Environment " finished-at="2023-12-15T05:01:44 EET" duration-ms="176" status="FAIL">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Environment is not supported]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Environment is not supported
-at Utls.SporticoConfigUtilsProd.<init>(SporticoConfigUtilsProd.java:19)
-at Utls.SporticoConfigUtilsProd.getInstance(SporticoConfigUtilsProd.java:28)
-at pages.SporticoLoginPRODPage.loadSporticoPROD(SporticoLoginPRODPage.java:76)
-at Test.SporticoPRODFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(SporticoPRODFullHappyScenarioTest.java:91)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ShouldBeAbleToExecuteFullHappyPathScenario -->
-        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:Test.SporticoPRODFullHappyScenarioTest@21719a0]" started-at="2023-12-15T05:01:44 EET" name="quite" finished-at="2023-12-15T05:01:45 EET" duration-ms="479" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=SporticoPRODFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.SporticoPRODFullHappyScenarioTest@21719a0] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quite -->
-      </class> <!-- Test.SporticoPRODFullHappyScenarioTest -->
-      <class name="Test.SporticoSTGFullHappyScenarioTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Test.SporticoSTGFullHappyScenarioTest@76b224cd]" started-at="2023-12-15T05:01:37 EET" name="Setup" finished-at="2023-12-15T05:01:44 EET" duration-ms="6494" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.SporticoSTGFullHappyScenarioTest@76b224cd]" started-at="2023-12-15T05:01:44 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full Scenario on Sportico STG Environment " finished-at="2023-12-15T05:02:11 EET" duration-ms="27017" status="FAIL">
+        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:TestScenarios.BlinkSTGFullHappyScenarioTest@53093491]" started-at="2023-12-15T05:59:02 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full Scenario on Blink STG Environment " finished-at="2023-12-15T05:59:35 EET" duration-ms="33355" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="portal"]/div/div/div/div[3]/div/button[2]"}
@@ -505,9 +318,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [53a32ff09bea46ea12dc7c381932e9d0, findElement {using=xpath, value=//*[@id="portal"]/div/div/div/div[3]/div/button[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56389}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56389/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 53a32ff09bea46ea12dc7c381932e9d0]]>
+Command: [c869ac03d3ef6b90a00d9b02084a3bd6, findElement {using=xpath, value=//*[@id="portal"]/div/div/div/div[3]/div/button[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59592}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59592/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c869ac03d3ef6b90a00d9b02084a3bd6]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="portal"]/div/div/div/div[3]/div/button[2]"}
@@ -516,9 +329,9 @@ For documentation on this error, please visit: https://www.selenium.dev/document
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [53a32ff09bea46ea12dc7c381932e9d0, findElement {using=xpath, value=//*[@id="portal"]/div/div/div/div[3]/div/button[2]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56389}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56389/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 53a32ff09bea46ea12dc7c381932e9d0
+Command: [c869ac03d3ef6b90a00d9b02084a3bd6, findElement {using=xpath, value=//*[@id="portal"]/div/div/div/div[3]/div/button[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59592}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59592/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c869ac03d3ef6b90a00d9b02084a3bd6
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -537,7 +350,7 @@ at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(Def
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
 at pages.FullHappyPathPage.CreateUser(FullHappyPathPage.java:508)
-at Test.SporticoSTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(SporticoSTGFullHappyScenarioTest.java:99)
+at TestScenarios.BlinkSTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(BlinkSTGFullHappyScenarioTest.java:101)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -557,46 +370,46 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ShouldBeAbleToExecuteFullHappyPathScenario -->
-        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:Test.SporticoSTGFullHappyScenarioTest@76b224cd]" started-at="2023-12-15T05:02:11 EET" name="quite" finished-at="2023-12-15T05:02:11 EET" duration-ms="453" status="PASS">
+        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:TestScenarios.BlinkSTGFullHappyScenarioTest@53093491]" started-at="2023-12-15T05:59:35 EET" name="quite" finished-at="2023-12-15T05:59:35 EET" duration-ms="223" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=SporticoSTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.SporticoSTGFullHappyScenarioTest@76b224cd] output={null}]]]>
+                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=BlinkSTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:TestScenarios.BlinkSTGFullHappyScenarioTest@53093491] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quite -->
-      </class> <!-- Test.SporticoSTGFullHappyScenarioTest -->
-      <class name="Test.BlinkDEVFullHappyScenarioTest">
-        <test-method is-config="true" signature="Setup()[pri:0, instance:Test.BlinkDEVFullHappyScenarioTest@160396db]" started-at="2023-12-15T05:01:37 EET" name="Setup" finished-at="2023-12-15T05:01:44 EET" duration-ms="6477" status="PASS">
+      </class> <!-- TestScenarios.BlinkSTGFullHappyScenarioTest -->
+      <class name="TestScenarios.SporticoSTGFullHappyScenarioTest">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:TestScenarios.SporticoSTGFullHappyScenarioTest@76b224cd]" started-at="2023-12-15T05:58:57 EET" name="Setup" finished-at="2023-12-15T05:59:02 EET" duration-ms="5117" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.BlinkDEVFullHappyScenarioTest@160396db]" started-at="2023-12-15T05:01:44 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full Scenario on Blink DEV Environment" finished-at="2023-12-15T05:01:59 EET" duration-ms="15230" status="FAIL">
+        <test-method signature="ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:TestScenarios.SporticoSTGFullHappyScenarioTest@76b224cd]" started-at="2023-12-15T05:59:02 EET" name="ShouldBeAbleToExecuteFullHappyPathScenario" description="Full Scenario on Sportico STG Environment " finished-at="2023-12-15T05:59:24 EET" duration-ms="21873" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[3]/button"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() ="Automated VMS Event"]"}
   (Session info: chrome=119.0.6045.160)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a00367c15218799ce2f4030a3c7e2522, findElement {using=xpath, value=//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[3]/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56408}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56408/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a00367c15218799ce2f4030a3c7e2522]]>
+Command: [c38676720616aa7d0263a850a2e1cc44, findElement {using=xpath, value=//*[text() ="Automated VMS Event"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59593}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59593/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c38676720616aa7d0263a850a2e1cc44]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[3]/button"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[text() ="Automated VMS Event"]"}
   (Session info: chrome=119.0.6045.160)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.15.0', revision: '1d14b5521b'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a00367c15218799ce2f4030a3c7e2522, findElement {using=xpath, value=//*[@id="root"]/div[1]/div[5]/main/div/div/form/div/div[3]/button}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56408}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56408/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a00367c15218799ce2f4030a3c7e2522
+Command: [c38676720616aa7d0263a850a2e1cc44, findElement {using=xpath, value=//*[text() ="Automated VMS Event"]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.160, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\Users\pc\AppData\Local\T...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59593}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59593/devtoo..., se:cdpVersion: 119.0.6045.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c38676720616aa7d0263a850a2e1cc44
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -614,8 +427,8 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at pages.BlinkLoginDEVPage.login(BlinkLoginDEVPage.java:85)
-at Test.BlinkDEVFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(BlinkDEVFullHappyScenarioTest.java:92)
+at pages.FromScratchEventPage.CreateEventFromScratch(FromScratchEventPage.java:128)
+at TestScenarios.SporticoSTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario(SporticoSTGFullHappyScenarioTest.java:94)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -635,18 +448,18 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ShouldBeAbleToExecuteFullHappyPathScenario -->
-        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:Test.BlinkDEVFullHappyScenarioTest@160396db]" started-at="2023-12-15T05:01:59 EET" name="quite" finished-at="2023-12-15T05:01:59 EET" duration-ms="337" status="PASS">
+        <test-method is-config="true" signature="quite(org.testng.ITestResult)[pri:0, instance:TestScenarios.SporticoSTGFullHappyScenarioTest@76b224cd]" started-at="2023-12-15T05:59:24 EET" name="quite" finished-at="2023-12-15T05:59:24 EET" duration-ms="275" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=BlinkDEVFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:Test.BlinkDEVFullHappyScenarioTest@160396db] output={null}]]]>
+                <![CDATA[[TestResult name=ShouldBeAbleToExecuteFullHappyPathScenario status=FAILURE method=SporticoSTGFullHappyScenarioTest.ShouldBeAbleToExecuteFullHappyPathScenario()[pri:0, instance:TestScenarios.SporticoSTGFullHappyScenarioTest@76b224cd] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quite -->
-      </class> <!-- Test.BlinkDEVFullHappyScenarioTest -->
+      </class> <!-- TestScenarios.SporticoSTGFullHappyScenarioTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>

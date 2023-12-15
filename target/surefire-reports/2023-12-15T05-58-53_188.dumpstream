@@ -1,0 +1,5 @@
+# Created at 2023-12-15T05:58:53.474
+Boot Manifest-JAR contains absolute paths in classpath 'D:\karim\Automation Projects\Blink_AutomationFrameWork\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
