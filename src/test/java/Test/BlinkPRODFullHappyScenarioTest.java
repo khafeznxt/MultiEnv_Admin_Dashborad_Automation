@@ -15,7 +15,7 @@ import java.awt.*;
 public class BlinkPRODFullHappyScenarioTest extends BaseTest {
 private WebDriver driver;
 
-    @Test(enabled = false)
+    /*@Test(enabled = false)
 
 
     //@Test(description = "Create Event From Scratch Test")
@@ -28,7 +28,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
     unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
     fromScratchEventPage.CreateEventFromScratch();
-}
+}*/
 /* @Test(description = "Create Group and Add User")
     public void ShouldBeAbleToCreatePackage (){
 

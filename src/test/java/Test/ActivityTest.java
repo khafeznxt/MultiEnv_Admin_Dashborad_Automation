@@ -14,7 +14,7 @@ public class ActivityTest extends BaseTest {
     public void ShouldBeAbleToCreateActivity(){
 
         UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
-        unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
+        unityLoginSTGPage.loadUnityStg().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
         ContentItineraryPage contentItineraryPage = new ContentItineraryPage(getDriver());
         contentItineraryPage.CreateItinerary();

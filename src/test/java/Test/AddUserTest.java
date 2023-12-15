@@ -17,7 +17,7 @@ public class AddUserTest extends BaseTest {
 
 
         UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
-        unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
+        unityLoginSTGPage.loadUnityStg().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
         FullHappyPathPage fullHappyPathPage = new FullHappyPathPage(getDriver());
         fullHappyPathPage.CreateUser();

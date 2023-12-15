@@ -16,7 +16,7 @@ import pages.FullHappyPathPage;
 
 
             UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
-            unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
+            unityLoginSTGPage.loadUnityStg().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
             FullHappyPathPage fullHappyPathPage = new FullHappyPathPage(getDriver());
             fullHappyPathPage.CreateSession();

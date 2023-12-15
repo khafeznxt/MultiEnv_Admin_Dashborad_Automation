@@ -18,7 +18,7 @@ public class DeleteEventTest extends BaseTest {
 
 
         UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
-        unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
+        unityLoginSTGPage.loadUnityStg().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
         DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
         deleteEventPage.DeleteEvent();

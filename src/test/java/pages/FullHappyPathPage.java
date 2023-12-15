@@ -725,6 +725,9 @@ public class FullHappyPathPage extends BasePage {
         activityhtimezone.click();
         activitytimezonevalue.click();
         activitysavebutton.click();
+        WebDriverWait wait16 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element9 = wait16.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
+        sessionsuccessmsg.click();
     }
     @Step
     public void CreateRoomType() {

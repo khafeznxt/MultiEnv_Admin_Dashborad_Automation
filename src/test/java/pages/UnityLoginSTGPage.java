@@ -71,7 +71,7 @@ public class UnityLoginSTGPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div[2]/button")
     protected WebElement createbttn;
 
-    public UnityLoginSTGPage load() {
+    public UnityLoginSTGPage loadUnityStg() {
         driver.get(UnityConfigUtilsStg.getInstance().BaseUrl());
         return this;
     }

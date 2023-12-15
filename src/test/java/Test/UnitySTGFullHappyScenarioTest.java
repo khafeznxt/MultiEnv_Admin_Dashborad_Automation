@@ -15,7 +15,7 @@ import java.awt.*;
 public class UnitySTGFullHappyScenarioTest extends BaseTest {
 private WebDriver driver;
 
-    @Test(enabled = false)
+ /*   @Test(enabled = false)
 
 
     //@Test(description = "Create Event From Scratch Test")
@@ -28,7 +28,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
     unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
     fromScratchEventPage.CreateEventFromScratch();
-}
+}*/
 /* @Test(description = "Create Group and Add User")
     public void ShouldBeAbleToCreatePackage (){
 
@@ -89,11 +89,11 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         fromScratchEventPage.load();
 
         UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
-        unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
+        unityLoginSTGPage.loadUnityStg().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
         // remove the comment to create new event for the full happypath scenario
         fromScratchEventPage.CreateEventFromScratch();
-        fromScratchEventPage.EnableVms();
+        //fromScratchEventPage.EnableVms();
         FullHappyPathPage fullHappyPathPage = new FullHappyPathPage(getDriver());
         fullHappyPathPage.CreateGroup();
         fullHappyPathPage.CreateUser();

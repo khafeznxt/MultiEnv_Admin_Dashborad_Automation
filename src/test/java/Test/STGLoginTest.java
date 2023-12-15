@@ -19,7 +19,7 @@ public class STGLoginTest extends BaseTest {
         UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
 
                 unityLoginSTGPage
-                        .load()
+                        .loadUnityStg()
                         .login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
 

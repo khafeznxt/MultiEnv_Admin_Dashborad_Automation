@@ -1,6 +1,7 @@
 package pages;
 
 import Utls.BlinkConfigUtilsSTG;
+import Utls.SporticoConfigUtilsSTG;
 import base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -71,8 +72,8 @@ public class SporticoLoginSTGPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div[2]/button")
     protected WebElement createbttn;
 
-    public SporticoLoginSTGPage loadBlinkSTG() {
-        driver.get(BlinkConfigUtilsSTG.getInstance().BaseUrl());
+    public SporticoLoginSTGPage loadSporticoSTG() {
+        driver.get(SporticoConfigUtilsSTG.getInstance().BaseUrl());
         return this;
     }
 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="7" parallel="methods" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="7" parallel="methods" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="Test.BlinkPRODFullHappyScenarioTest">
+        <methods>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+          <include name="quite"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- Test.BlinkPRODFullHappyScenarioTest -->
+      <class name="Test.BlinkSTGFullHappyScenarioTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+        </methods>
+      </class> <!-- Test.BlinkSTGFullHappyScenarioTest -->
+      <class name="Test.SporticoPRODFullHappyScenarioTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+        </methods>
+      </class> <!-- Test.SporticoPRODFullHappyScenarioTest -->
+      <class name="Test.BlinkDEVFullHappyScenarioTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+        </methods>
+      </class> <!-- Test.BlinkDEVFullHappyScenarioTest -->
+      <class name="Test.UnitySTGFullHappyScenarioTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+        </methods>
+      </class> <!-- Test.UnitySTGFullHappyScenarioTest -->
+      <class name="Test.UnityProdFullHappyScenarioTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+        </methods>
+      </class> <!-- Test.UnityProdFullHappyScenarioTest -->
+      <class name="Test.SporticoSTGFullHappyScenarioTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+        </methods>
+      </class> <!-- Test.SporticoSTGFullHappyScenarioTest -->
+      <class name="Test.DeleteEventTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToDeleteEvent"/>
+        </methods>
+      </class> <!-- Test.DeleteEventTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

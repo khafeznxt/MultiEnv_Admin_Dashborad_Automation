@@ -71,7 +71,7 @@ public class UnityLoginProductionPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div[2]/button")
     protected WebElement createbttn;
 
-    public UnityLoginProductionPage loadProd() {
+    public UnityLoginProductionPage loadUnityProd() {
         driver.get(UnityConfigUtilsProd.getInstance().BaseUrl());
         return this;
     }

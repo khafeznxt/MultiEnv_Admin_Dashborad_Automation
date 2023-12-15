@@ -31,7 +31,7 @@
                 <version>3.0.0</version>
                 <configuration>
                     <parallel>methods</parallel>
-                    <threadCount>1</threadCount>
+                    <threadCount>7</threadCount>
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.21/aspectjweaver-1.9.21.jar"
                     </argLine>
