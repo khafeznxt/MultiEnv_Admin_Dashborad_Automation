@@ -1,13 +1,13 @@
 package Test;
 
+import Utls.BlinkConfigUtilsDEV;
+import Utls.BlinkConfigUtilsProd;
 import Utls.UnityConfigUtilsStg;
 import base.BaseTest;
 import io.qameta.allure.Feature;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.BlinkLoginDEVPage;
-import pages.FromScratchEventPage;
-import pages.FullHappyPathPage;
+import pages.*;
 
 import java.awt.*;
 
@@ -89,7 +89,7 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         //fromScratchEventPage.loadBlinkDev();
 
         BlinkLoginDEVPage blinkLoginDEVPage = new BlinkLoginDEVPage(getDriver());
-        blinkLoginDEVPage.loadBlinkDev().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
+        blinkLoginDEVPage.loadBlinkDev().login(BlinkConfigUtilsDEV.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
         // remove the comment to create new event for the full happypath scenario
         fromScratchEventPage.CreateEventFromScratch();
@@ -106,8 +106,8 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         fullHappyPathPage.CreateRoomType();
         fullHappyPathPage.CreateStayAndAddRoom();
         fullHappyPathPage.AddTripToTheParticipant();
-        //DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
-        //deleteEventPage.DeleteEvent();
+        DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
+        deleteEventPage.DeleteEvent();
 
 
     }

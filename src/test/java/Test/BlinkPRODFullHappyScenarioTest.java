@@ -1,14 +1,13 @@
 package Test;
 
+import Utls.BlinkConfigUtilsProd;
+import Utls.BlinkConfigUtilsSTG;
 import Utls.UnityConfigUtilsStg;
 import base.BaseTest;
 import io.qameta.allure.Feature;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
-import pages.DeleteEventPage;
-import pages.FromScratchEventPage;
-import pages.UnityLoginSTGPage;
-import pages.FullHappyPathPage;
+import pages.*;
 
 import java.awt.*;
 
@@ -82,15 +81,15 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
 
     }*/
 
-    @Feature("Full VMS Scenario _ Unity ")
-    @Test(description = "Full VMS Scenario _ Unity ")
+    @Feature("Full Scenario on Blink DEV Environment  ")
+    @Test(description = "Full Scenario on Blink DEV Environment ")
     public void ShouldBeAbleToExecuteFullHappyPathScenario () throws AWTException {
 
         FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
         fromScratchEventPage.load();
 
-        UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
-        unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
+        BlinkLoginPRODPage blinkLoginPRODPage = new BlinkLoginPRODPage(getDriver());
+        blinkLoginPRODPage.loadBlinkPROD().login(BlinkConfigUtilsProd.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
         // remove the comment to create new event for the full happypath scenario
         fromScratchEventPage.CreateEventFromScratch();

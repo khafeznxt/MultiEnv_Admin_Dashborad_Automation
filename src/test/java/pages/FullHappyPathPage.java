@@ -474,11 +474,12 @@ public class FullHappyPathPage extends BasePage {
         // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
        //WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div[1]")));
         //driver.navigate().refresh();
-        createdgroup.click();
-    adduserbttn.click();
         WebDriverWait wait45 = new WebDriverWait(driver,Duration.ofSeconds(30));
         WebElement element45 = wait45.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
-        sessionsuccessmsg.click();
+    sessionsuccessmsg.click();
+    createdgroup.click();
+    adduserbttn.click();
+
 
 
     }
@@ -486,9 +487,9 @@ public class FullHappyPathPage extends BasePage {
     @Step
     public void CreateUser() throws AWTException {
         // createdevent.click();
-        registration.click();
+        /*registration.click();
         participants.click();
-        adduserbttnoutgroup.click();
+        adduserbttnoutgroup.click();*/
         // the above actions for the separated test
         uploadphoto.click();
         uploadbttn.click();
