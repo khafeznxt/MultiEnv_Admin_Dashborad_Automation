@@ -105,8 +105,8 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         fullHappyPathPage.CreateRoomType();
         fullHappyPathPage.CreateStayAndAddRoom();
         fullHappyPathPage.AddTripToTheParticipant();
-        DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
-        deleteEventPage.DeleteEvent();
+        //DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
+        //deleteEventPage.DeleteEvent();
 
 
     }

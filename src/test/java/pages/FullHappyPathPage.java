@@ -412,8 +412,12 @@ public class FullHappyPathPage extends BasePage {
 
     //Add Trip to the Participant
 
-    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div/div[2]/div[1]/table/tbody/tr")
+    @FindBy(xpath=  "//*[type() =\"button\"]")
     protected WebElement firstparticipant;
+
+
+    @FindBy(xpath = "//*[@id=\"col-5\"]/div/button")
+    protected WebElement editfstparticipant;
 
     @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/section/div[2]/div/div[1]/ul/li[2]")
     protected WebElement tripinfo;
@@ -451,6 +455,11 @@ public class FullHappyPathPage extends BasePage {
     @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/aside[2]/form/div[1]/div/div[1]/h1")
     protected WebElement newtickettitle;
 
+    //Add Stay Elements
+    @FindBy(xpath=  "//*[text() =\"Add Stay\"]")
+    protected WebElement addstsybttn;
+
+    //Add Flight Elements
 
 
 
@@ -668,6 +677,8 @@ public class FullHappyPathPage extends BasePage {
        newsession.click();
 
     }
+
+
     @Step
     public void CreateNewTicketInsideSession (){
         /*createdevent.click();  // to test separated , Comment if this test will be a part of the whole test
@@ -815,8 +826,31 @@ public class FullHappyPathPage extends BasePage {
         confirmaddtripbttn.click();
         WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
-        //sessionsuccessmsg.click();
+        sessionsuccessmsg.click();
 
+
+
+
+    }
+
+    @Step
+    public void AddStayToParticipant(){
+        // The start for the separated test
+        createdevent.click();
+        registration.click();
+        participants.click();
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+        WebElement element = wait.until(ExpectedConditions.visibilityOf(creatgroupbttn));
+        createdgroup.click();
+        firstparticipant.click();
+        //tripinfo.click();
+        //editfstparticipant.click();
+        // the end of separated Test
+
+        /*WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(addtripbttn));
+        addtripbttn.click();*/
+         addstsybttn.click();
 
 
 
