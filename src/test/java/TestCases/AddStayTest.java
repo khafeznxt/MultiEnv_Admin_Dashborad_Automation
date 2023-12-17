@@ -8,7 +8,8 @@ import org.testng.annotations.Test;
 import pages.BlinkLoginDEVPage;
 import pages.FullHappyPathPage;
 import pages.UnityLoginSTGPage;
-
+//add comment
+//add 2
 public class AddStayTest extends BaseTest {
     private WebDriver driver;
     @Test(enabled = true)
@@ -20,7 +21,7 @@ public class AddStayTest extends BaseTest {
         blinkLoginDEVPage.loadBlinkDev().login(BlinkConfigUtilsDEV.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
         FullHappyPathPage fullHappyPathPage = new FullHappyPathPage(getDriver());
-        fullHappyPathPage.AddStayToParticipant();
+            fullHappyPathPage.AddStayToParticipant();
 
     }
 }

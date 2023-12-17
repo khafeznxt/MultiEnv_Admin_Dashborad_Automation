@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.awt.*;
 import java.awt.datatransfer.StringSelection;
@@ -412,7 +413,7 @@ public class FullHappyPathPage extends BasePage {
 
     //Add Trip to the Participant
 
-    @FindBy(xpath=  "//*[type() =\"button\"]")
+    @FindBy(xpath="//tr[@role=\"button\"]")
     protected WebElement firstparticipant;
 
 
@@ -506,7 +507,7 @@ public class FullHappyPathPage extends BasePage {
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 
         Robot robot = new Robot();
-        robot.delay(1000); // Introduce a delay for the file dialog to appear
+        robot.delay(2000); // Introduce a delay for the file dialog to appear
         robot.keyPress(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_V);
         robot.keyRelease(KeyEvent.VK_V);
@@ -843,6 +844,12 @@ public class FullHappyPathPage extends BasePage {
         WebElement element = wait.until(ExpectedConditions.visibilityOf(creatgroupbttn));
         createdgroup.click();
         firstparticipant.click();
+        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        boolean element4 = wait4.until(ExpectedConditions.elementToBeSelected(firstparticipant));
+        Assert.assertTrue(element4);
+
+
+        //firstparticipant.click();
         //tripinfo.click();
         //editfstparticipant.click();
         // the end of separated Test
@@ -850,7 +857,7 @@ public class FullHappyPathPage extends BasePage {
         /*WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(addtripbttn));
         addtripbttn.click();*/
-         addstsybttn.click();
+         //addstsybttn.click();
 
 
 
