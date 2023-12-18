@@ -1,1 +1,1 @@
-[{"uid":"f5bf4d05997cc8ee","name":"Full Scenario on Blink DEV Environment","time":{"start":1702856915737,"stop":1702856992430,"duration":76693},"status":"passed","severity":"normal"}]
+[{"uid":"98f063fe3b7c5ce9","name":"ShouldBeAbleToDeleteEvent","time":{"start":1702920135612,"stop":1702920146654,"duration":11042},"status":"passed","severity":"normal"},{"uid":"50f3340c2e4495f","name":"Full Scenario on Blink DEV Environment","time":{"start":1702919844935,"stop":1702919912883,"duration":67948},"status":"broken","severity":"normal"}]

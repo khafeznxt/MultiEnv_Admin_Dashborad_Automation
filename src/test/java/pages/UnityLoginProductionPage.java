@@ -42,6 +42,8 @@ public class UnityLoginProductionPage extends BasePage {
 
     @FindBy(xpath=  "//*[text() =\"Add Venue\"]")
     protected WebElement addvenue;
+    @FindBy(xpath=  "//*[text() =\"New Venue\"]")
+    protected WebElement allvenuespage;
 
     @FindBy(name = "Venue Type")
     protected WebElement venuetype;

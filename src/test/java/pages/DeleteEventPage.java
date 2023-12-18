@@ -101,7 +101,7 @@ public class DeleteEventPage extends BasePage {
 
         return new UnityLoginSTGPage(driver);
     }
-@Step
+    @Step
     public void DeleteEvent(){
         createdevent1.click();
         eventconfig.click();

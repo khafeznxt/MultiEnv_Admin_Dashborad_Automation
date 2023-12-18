@@ -25,6 +25,7 @@ public class BlinkDEVFullHappyScenarioTest extends BaseTest {
 
         // remove the comment to create new event for the full happy path scenario
         fromScratchEventPage.CreateEventFromScratch();
+        //VMS Addon only available for Unity Project
         //fromScratchEventPage.EnableVms();
         FullHappyPathPage fullHappyPathPage = new FullHappyPathPage(getDriver());
         fullHappyPathPage.CreateGroup();
@@ -38,6 +39,7 @@ public class BlinkDEVFullHappyScenarioTest extends BaseTest {
         fullHappyPathPage.CreateRoomType();
         fullHappyPathPage.CreateStayAndAddRoom();
         fullHappyPathPage.AddTripToTheParticipant();
+        fullHappyPathPage.AddStayToParticipant();
         DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
         deleteEventPage.DeleteEvent();
 

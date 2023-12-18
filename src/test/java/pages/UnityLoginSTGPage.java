@@ -43,6 +43,7 @@ public class UnityLoginSTGPage extends BasePage {
     @FindBy(xpath=  "//*[text() =\"Add Venue\"]")
     protected WebElement addvenue;
 
+
     @FindBy(name = "Venue Type")
     protected WebElement venuetype;
 
