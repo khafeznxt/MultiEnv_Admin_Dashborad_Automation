@@ -1,6 +1,7 @@
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\TestCases\DeleteUserTest.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\TestCases\STGLoginTest.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\Utls\BlinkConfigUtilsProd.java
+D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\TestCases\AddStayTest.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\pages\SporticoLoginPRODPage.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\pages\BlinkLoginPRODPage.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\Utls\UnityConfigUtilsProd.java
@@ -22,6 +23,7 @@ D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\base\BaseTe
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\pages\BlinkLoginSTGPage.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\TestScenarios\SporticoPRODFullHappyScenarioTest.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\Factory\DriverFactory.java
+D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\TestCases\CreateEventFromScratchTest.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\TestCases\DeleteEventTest.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\pages\DeleteEventPage.java
 D:\karim\Automation Projects\Blink_AutomationFrameWork\src\test\java\Utls\BlinkConfigUtilsSTG.java

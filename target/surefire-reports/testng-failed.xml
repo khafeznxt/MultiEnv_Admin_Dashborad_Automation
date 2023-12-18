@@ -3,34 +3,6 @@
 <suite thread-count="4" parallel="methods" name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="4" parallel="methods" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="TestScenarios.UnitySTGFullHappyScenarioTest">
-        <methods>
-          <include name="quite"/>
-          <include name="Setup"/>
-          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
-        </methods>
-      </class> <!-- TestScenarios.UnitySTGFullHappyScenarioTest -->
-      <class name="TestScenarios.BlinkDEVFullHappyScenarioTest">
-        <methods>
-          <include name="quite"/>
-          <include name="Setup"/>
-          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
-        </methods>
-      </class> <!-- TestScenarios.BlinkDEVFullHappyScenarioTest -->
-      <class name="TestScenarios.BlinkSTGFullHappyScenarioTest">
-        <methods>
-          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
-          <include name="quite"/>
-          <include name="Setup"/>
-        </methods>
-      </class> <!-- TestScenarios.BlinkSTGFullHappyScenarioTest -->
-      <class name="TestCases.DeleteEventTest">
-        <methods>
-          <include name="quite"/>
-          <include name="Setup"/>
-          <include name="ShouldBeAbleToDeleteEvent"/>
-        </methods>
-      </class> <!-- TestCases.DeleteEventTest -->
       <class name="TestScenarios.SporticoSTGFullHappyScenarioTest">
         <methods>
           <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
@@ -38,6 +10,48 @@
           <include name="Setup"/>
         </methods>
       </class> <!-- TestScenarios.SporticoSTGFullHappyScenarioTest -->
+      <class name="TestScenarios.UnitySTGFullHappyScenarioTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+        </methods>
+      </class> <!-- TestScenarios.UnitySTGFullHappyScenarioTest -->
+      <class name="TestCases.CreateEventFromScratchTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToCreateFromScratchEvent"/>
+        </methods>
+      </class> <!-- TestCases.CreateEventFromScratchTest -->
+      <class name="TestCases.AddStayTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToAddStayToParticipant"/>
+        </methods>
+      </class> <!-- TestCases.AddStayTest -->
+      <class name="TestScenarios.BlinkSTGFullHappyScenarioTest">
+        <methods>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+          <include name="quite"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- TestScenarios.BlinkSTGFullHappyScenarioTest -->
+      <class name="TestScenarios.BlinkDEVFullHappyScenarioTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToExecuteFullHappyPathScenario"/>
+        </methods>
+      </class> <!-- TestScenarios.BlinkDEVFullHappyScenarioTest -->
+      <class name="TestCases.DeleteEventTest">
+        <methods>
+          <include name="quite"/>
+          <include name="Setup"/>
+          <include name="ShouldBeAbleToDeleteEvent"/>
+        </methods>
+      </class> <!-- TestCases.DeleteEventTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

@@ -1,11 +1,13 @@
 package pages;
 
 import base.BasePage;
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 import java.util.List;
@@ -74,9 +76,9 @@ public class DeleteEventPage extends BasePage {
 
 
 
-
-    public UnityLoginSTGPage DeleteEvent(){
-List<WebElement> events = List.of(new WebElement[]{createdevent1});
+    @Step
+    public UnityLoginSTGPage DeleteBulkEvents(){
+    List<WebElement> events = List.of(new WebElement[]{createdevent1});
       //  , createdevent2  , createdevent3,createdevent4,createdevent5 ,createdevent6, createdevent7  , createdevent8,createdevent9,createdevent10});
     for (WebElement element : events ){
        element.click();
@@ -98,5 +100,23 @@ List<WebElement> events = List.of(new WebElement[]{createdevent1});
 }
 
         return new UnityLoginSTGPage(driver);
+    }
+@Step
+    public void DeleteEvent(){
+        createdevent1.click();
+        eventconfig.click();
+        eventinfo.click();
+        edit.click();
+        threedots.click();
+        deletebttn.click();
+        deletetxt.sendKeys("delete-event-permanently");
+        deleteforeverbttn.click();
+        WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element13 = wait13.until(ExpectedConditions.elementToBeClickable(sessionsuccessmsg));
+        //sessionsuccessmsg.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element1 = wait.until(ExpectedConditions.visibilityOf(switcherpageheader));
+
+
     }
 }

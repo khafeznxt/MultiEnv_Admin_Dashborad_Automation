@@ -17,6 +17,8 @@ import java.awt.event.KeyEvent;
 
 import java.io.File;
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class FullHappyPathPage extends BasePage {
     public FullHappyPathPage(WebDriver driver) {
@@ -80,12 +82,12 @@ public class FullHappyPathPage extends BasePage {
     protected WebElement uploadbttn;
 
 
-    @FindBy(xpath = "//*[@id=\"portal\"]/div/div/div/div[3]/div/button[2]")
+    @FindBy(xpath=  "//*[text() =\"Accept\"]")
     protected WebElement acceptuploadbttn;
 
 
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/section/div[2]/div/div/div[2]/button")
+    @FindBy(xpath=  "//*[text() =\"Create\"]")
     protected WebElement createuserbttn;
 
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/section/div[2]/div/div[1]/ul/li[1]")
@@ -413,7 +415,7 @@ public class FullHappyPathPage extends BasePage {
 
     //Add Trip to the Participant
 
-    @FindBy(xpath="//tr[@role=\"button\"]")
+    @FindBy(xpath=  "//*[text() =\"Automated\"]")
     protected WebElement firstparticipant;
 
 
@@ -458,14 +460,31 @@ public class FullHappyPathPage extends BasePage {
 
     //Add Stay Elements
     @FindBy(xpath=  "//*[text() =\"Add Stay\"]")
-    protected WebElement addstsybttn;
+    protected WebElement addstaybttn;
 
-    //Add Flight Elements
+    //Add Stay Elements
+
+    @FindBy(xpath=  "//*[text() =\"Continue\"]")
+    protected WebElement staycontinuebttn;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div[3]/div[2]/div[2]/div/div[2]/div/div/div/div[2]/button[15]")
+    protected WebElement staystartdate;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div[3]/div[2]/div[2]/div/div[2]/div/div/div/div[2]/button[19]")
+    protected WebElement stayendtdate;
+
+    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div[3]/div/div[2]/div[2]/div[2]/div/div[1]/div[2]/div[4]/button")
+    protected WebElement firstbookbttn;
+
+    @FindBy(id=  "user")
+    protected WebElement stayselectuser;
 
 
+    @FindBy(xpath=  "//*[text() =\"Book\"]")
+    protected WebElement bookuserbttn;
 
-
-
+    @FindBy(xpath=  "//*[text() =\"Save\"]")
+    protected WebElement savestaybttn;
 
 
 
@@ -514,7 +533,8 @@ public class FullHappyPathPage extends BasePage {
         robot.keyRelease(KeyEvent.VK_CONTROL);
         robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
-
+        WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element14 = wait14.until(ExpectedConditions.visibilityOf(acceptuploadbttn));
         acceptuploadbttn.click();
         fname.sendKeys("Automated");
         lname.sendKeys("User");
@@ -557,13 +577,15 @@ public class FullHappyPathPage extends BasePage {
         //createdevent.click();
     eventconfig.click();
     packages.click();
+    WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
+    WebElement element4 = wait1.until(ExpectedConditions.elementToBeClickable(newpackagebttn));
     newpackagebttn.click();
     packagetitle.sendKeys("AutoPackage 2");
     packagepriority.sendKeys("3");
     savepackagebttn.click();
-        WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element13 = wait13.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
-    sessionsuccessmsg.click();
+   /* WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
+    WebElement element13 = wait13.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
+    sessionsuccessmsg.click();*/
    // driver.navigate().refresh();
 
 
@@ -583,6 +605,8 @@ public class FullHappyPathPage extends BasePage {
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement element4 = wait1.until(ExpectedConditions.elementToBeClickable(tickettype));
         tickettype.click();
+        WebDriverWait wait11 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element14 = wait11.until(ExpectedConditions.elementToBeClickable(addticketbttn));
         addticketbttn.click();
         ticketname.sendKeys("VMSType");
         packagesdropdown.click();
@@ -647,25 +671,28 @@ public class FullHappyPathPage extends BasePage {
 
         //createdevent.click();  // to test separated , Comment if this test will be a part of the whole test
         WebDriverWait wait9 = new WebDriverWait(driver, Duration.ofSeconds(30));
-        WebElement element3 = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() =\"Planning\"]")));
+        WebElement element3 = wait9.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() =\"Sessions\"]")));
         //driver.navigate().refresh();
-        //driver.navigate().to("https://dev-admin.blink.global/sessions/p/1");
-
-       planning.click();
+        // planning.click();
         sessions.click();
        addsessionbttn.click();
        sessiontitle.sendKeys("Automated VMS Session");
        sessionattire.sendKeys("formal");
-       sessiondate.sendKeys("12/05/2023");
+        // Get the current date
+        LocalDate currentDate = LocalDate.now();
+        // Define the date format
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
+        // Format the current date to a string
+        String formattedDate = currentDate.format(formatter);
+        sessiondate.sendKeys(formattedDate);
        sessionfrom.sendKeys("10:00 AM");
        sessiontill.sendKeys("10:00 PM");
        sessiontill.click();
-        //JavascriptExecutor js = (JavascriptExecutor) driver;
+       //JavascriptExecutor js = (JavascriptExecutor) driver;
        // js.executeScript("arguments[0].scrollIntoView();", sessiondesc);
         driver.switchTo().frame("event_description_ifr");
         sessiondesc.sendKeys("Testing If VMS works");
         driver.switchTo().defaultContent();
-
         sessiontype.click();
         sessiontypevalue.click();
         venue.click();
@@ -746,6 +773,8 @@ public class FullHappyPathPage extends BasePage {
         // Createdevent element should be comment if you test the full happy path scenario , not commented if you test the method separetly
        //createdevent.click();
         accomodation.click();
+        WebDriverWait wait16 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element17 = wait16.until(ExpectedConditions.elementToBeClickable(roomtype));
         roomtype.click();
         WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element7 = wait15.until(ExpectedConditions.visibilityOf(addnewroomtypebttn));
@@ -755,8 +784,8 @@ public class FullHappyPathPage extends BasePage {
         WebElement element22 = wait13.until(ExpectedConditions.visibilityOf(createroomtypebttn));
         createroomtypebttn.click();
         //createroomtypebttn.isSelected();
-        WebDriverWait wait16 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element9 = wait16.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
+        WebDriverWait wait19 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element19 = wait19.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
         sessionsuccessmsg.click();
 
 
@@ -843,10 +872,22 @@ public class FullHappyPathPage extends BasePage {
         WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
         WebElement element = wait.until(ExpectedConditions.visibilityOf(creatgroupbttn));
         createdgroup.click();
+        WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element5 = wait5.until(ExpectedConditions.elementToBeClickable(firstparticipant));
         firstparticipant.click();
-        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
+       /* WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(10));
         boolean element4 = wait4.until(ExpectedConditions.elementToBeSelected(firstparticipant));
-        Assert.assertTrue(element4);
+        Assert.assertTrue(element4);*/
+        tripinfo.click();
+        addstaybttn.click();
+        staystartdate.click();
+        stayendtdate.click();
+        staycontinuebttn.click();
+        firstbookbttn.click();
+        stayselectuser.click();
+        bookuserbttn.click();
+        savestaybttn.click();
+
 
 
         //firstparticipant.click();

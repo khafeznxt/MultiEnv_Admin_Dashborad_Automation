@@ -1,9 +1,11 @@
 package TestCases;
 
+import Utls.BlinkConfigUtilsDEV;
 import Utls.UnityConfigUtilsStg;
 import base.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
+import pages.BlinkLoginDEVPage;
 import pages.DeleteEventPage;
 import pages.UnityLoginSTGPage;
 
@@ -17,8 +19,8 @@ public class DeleteEventTest extends BaseTest {
    public void ShouldBeAbleToDeleteEvent () {
 
 
-        UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
-        unityLoginSTGPage.loadUnityStg().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
+        BlinkLoginDEVPage blinkLoginDEVPage = new BlinkLoginDEVPage(getDriver());
+        blinkLoginDEVPage.loadBlinkDev().login(BlinkConfigUtilsDEV.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
 
         DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
         deleteEventPage.DeleteEvent();

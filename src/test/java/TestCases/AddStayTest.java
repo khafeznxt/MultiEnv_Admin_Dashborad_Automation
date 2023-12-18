@@ -14,7 +14,7 @@ public class AddStayTest extends BaseTest {
     private WebDriver driver;
     @Test(enabled = true)
     // @Test(description = "Add Stay To Participants")
-    public void ShouldBeAbleToAddTicketInsideSession (){
+    public void ShouldBeAbleToAddStayToParticipant (){
 
 
         BlinkLoginDEVPage blinkLoginDEVPage = new BlinkLoginDEVPage(getDriver());

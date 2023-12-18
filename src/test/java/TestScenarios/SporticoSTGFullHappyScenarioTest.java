@@ -14,72 +14,6 @@ import java.awt.*;
 public class SporticoSTGFullHappyScenarioTest extends BaseTest {
 private WebDriver driver;
 
-  /*  @Test(enabled = false)
-
-
-    //@Test(description = "Create Event From Scratch Test")
-public void ShouldBeAbleToCreateFromScratchEvent (){
-
-    FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-    //fromScratchEventPage.load();
-
-        BlinkLoginSTGPage blinkLoginSTGPage = new BlinkLoginSTGPage(getDriver());
-    blinkLoginSTGPage.loadBlinkSTG().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
-
-    fromScratchEventPage.CreateEventFromScratch();
-}*/
-/* @Test(description = "Create Group and Add User")
-    public void ShouldBeAbleToCreatePackage (){
-
-        FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-        fromScratchEventPage.load();
-
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
-
-        // fromScratchEventPage.CreateEventFromScratch();
-
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-     registrationParticipantsPage.CreateGroup();
-     registrationParticipantsPage.CreateUser();
-
-    }
-
-    @Test(description = "Create PackageAndTicket")
-    public void ShouldBeAbleToCreatePackageAndTicket (){
-
-        FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-        fromScratchEventPage.load();
-
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
-
-        // fromScratchEventPage.CreateEventFromScratch();
-
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-        registrationParticipantsPage.CreatePackage();
-        registrationParticipantsPage.CreateTicketType();
-
-
-
-    }
-
-    @Test(description = "Create Venue")
-    public void ShouldBeAbleToCreateVenue (){
-
-        FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-        fromScratchEventPage.load();
-
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
-
-        // fromScratchEventPage.CreateEventFromScratch();
-
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-        registrationParticipantsPage.CreateVenue();
-
-    }*/
-
     @Feature("Full Scenario on Sportico STG Environment ")
     @Test(description = "Full Scenario on Sportico STG Environment ")
     public void ShouldBeAbleToExecuteFullHappyPathScenario () throws AWTException {
@@ -96,12 +30,12 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
         FullHappyPathPage fullHappyPathPage = new FullHappyPathPage(getDriver());
         fullHappyPathPage.CreateGroup();
         fullHappyPathPage.CreateUser();
-       fullHappyPathPage.CreatePackage();
+        fullHappyPathPage.CreatePackage();
         fullHappyPathPage.CreateTicketType();
         fullHappyPathPage.CreateVenue();
         fullHappyPathPage.CreateSession();
         fullHappyPathPage.CreateNewTicketInsideSession();
-       fullHappyPathPage.CreateActivityForAnEvent();
+        fullHappyPathPage.CreateActivityForAnEvent();
         fullHappyPathPage.CreateRoomType();
         fullHappyPathPage.CreateStayAndAddRoom();
         fullHappyPathPage.AddTripToTheParticipant();
@@ -110,22 +44,4 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
 
 
     }
-
-    /* @Test(description = "Create Group and Add User")
-    public void ShouldBeAbleToCreatePackage (){
-
-        FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-        fromScratchEventPage.load();
-
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
-
-        // fromScratchEventPage.CreateEventFromScratch();
-
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-        registrationParticipantsPage.CreatePackage();
-
-    }*/
-
-
 }

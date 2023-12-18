@@ -14,75 +14,9 @@ import java.awt.*;
 public class BlinkPRODFullHappyScenarioTest extends BaseTest {
 private WebDriver driver;
 
-    /*@Test(enabled = false)
-
-
-    //@Test(description = "Create Event From Scratch Test")
-public void ShouldBeAbleToCreateFromScratchEvent (){
-
-    FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-    fromScratchEventPage.load();
-
-    UnityLoginSTGPage unityLoginSTGPage = new UnityLoginSTGPage(getDriver());
-    unityLoginSTGPage.load().login(UnityConfigUtilsStg.getInstance().getusername(), UnityConfigUtilsStg.getInstance().getPassword());
-
-    fromScratchEventPage.CreateEventFromScratch();
-}*/
-/* @Test(description = "Create Group and Add User")
-    public void ShouldBeAbleToCreatePackage (){
-
-        FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-        fromScratchEventPage.load();
-
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
-
-        // fromScratchEventPage.CreateEventFromScratch();
-
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-     registrationParticipantsPage.CreateGroup();
-     registrationParticipantsPage.CreateUser();
-
-    }
-
-    @Test(description = "Create PackageAndTicket")
-    public void ShouldBeAbleToCreatePackageAndTicket (){
-
-        FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-        fromScratchEventPage.load();
-
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
-
-        // fromScratchEventPage.CreateEventFromScratch();
-
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-        registrationParticipantsPage.CreatePackage();
-        registrationParticipantsPage.CreateTicketType();
-
-
-
-    }
-
-    @Test(description = "Create Venue")
-    public void ShouldBeAbleToCreateVenue (){
-
-        FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-        fromScratchEventPage.load();
-
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
-
-        // fromScratchEventPage.CreateEventFromScratch();
-
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-        registrationParticipantsPage.CreateVenue();
-
-    }*/
-
     @Feature("Full Scenario on Blink PROD Environment  ")
-    //@Test(enabled = false)
-    @Test(description = "Full Scenario on Blink DEV Environment ")
+    @Test(enabled = false)
+    //@Test(description = "Full Scenario on Blink DEV Environment ")
     public void ShouldBeAbleToExecuteFullHappyPathScenario () throws AWTException {
 
         FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
@@ -111,22 +45,5 @@ public void ShouldBeAbleToCreateFromScratchEvent (){
 
 
     }
-
-    /* @Test(description = "Create Group and Add User")
-    public void ShouldBeAbleToCreatePackage (){
-
-        FromScratchEventPage fromScratchEventPage = new FromScratchEventPage(getDriver());
-        fromScratchEventPage.load();
-
-        LoginPage loginPage = new LoginPage(getDriver());
-        loginPage.load().login(ConfigUtils.getInstance().getusername(), ConfigUtils.getInstance().getPassword());
-
-        // fromScratchEventPage.CreateEventFromScratch();
-
-        RegistrationParticipantsPage registrationParticipantsPage = new RegistrationParticipantsPage(getDriver());
-        registrationParticipantsPage.CreatePackage();
-
-    }*/
-
 
 }

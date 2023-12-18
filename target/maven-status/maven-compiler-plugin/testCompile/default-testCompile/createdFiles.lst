@@ -26,6 +26,7 @@ Utls\BlinkConfigUtilsDEV.class
 Utls\CookieUtils.class
 pages\DeleteEventPage.class
 TestScenarios\BlinkSTGFullHappyScenarioTest.class
+TestCases\AddStayTest.class
 pages\BlinkLoginPRODPage.class
 Utls\SporticoConfigUtilsSTG.class
 TestScenarios\SporticoPRODFullHappyScenarioTest.class
@@ -37,4 +38,5 @@ Utls\SporticoConfigUtilsProd.class
 TestCases\SessionTest.class
 pages\SporticoLoginSTGPage.class
 TestCases\AccommodationTest.class
+TestCases\CreateEventFromScratchTest.class
 Utls\UnityConfigUtilsStg.class

@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class FromScratchEventPage extends BasePage {
 
@@ -117,10 +119,16 @@ public class FromScratchEventPage extends BasePage {
         eventtype.click();
         typevalue.click();
         eventslug.sendKeys("autovms");
-        startdate.sendKeys("12022023");
+        // Get the current date
+        LocalDate currentDate = LocalDate.now();
+        // Define the date format
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
+        // Format the current date to a string
+        String formattedDate = currentDate.format(formatter);
+        startdate.sendKeys(formattedDate);
         starttime.sendKeys("1200PM");
         endtime.sendKeys("0800PM");
-        enddate.sendKeys("01012024");
+        enddate.sendKeys(formattedDate);
         // cancelbttn.click();
         timezone.click();
         timezonevalue.click();
@@ -129,20 +137,6 @@ public class FromScratchEventPage extends BasePage {
         WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
         //sessionsuccessmsg.click();
-// Enable VMS
-       /* eventconfig.click();
-        eventinfo.click();
-        WebDriverWait wait44 = new WebDriverWait(driver, Duration.ofSeconds(40));
-        WebElement element44 = wait44.until(ExpectedConditions.visibilityOf(editevent));
-        editevent.click();
-        WebDriverWait wait34 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element14 = wait34.until(ExpectedConditions.visibilityOf(typevalue));
-        advancedconfig.click();
-        WebDriverWait wait35 = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement element15 = wait35.until(ExpectedConditions.visibilityOf(vmstogglebttn));
-        vmstogglebttn.click();
-        saveeventediting.click();*/
-
 
     }
 
@@ -152,7 +146,7 @@ public class FromScratchEventPage extends BasePage {
         WebDriverWait wait44 = new WebDriverWait(driver, Duration.ofSeconds(40));
         WebElement element44 = wait44.until(ExpectedConditions.visibilityOf(editevent));
         editevent.click();
-        WebDriverWait wait34 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait34 = new WebDriverWait(driver, Duration.ofSeconds(0));
         WebElement element14 = wait34.until(ExpectedConditions.visibilityOf(typevalue));
         advancedconfig.click();
         WebDriverWait wait35 = new WebDriverWait(driver, Duration.ofSeconds(10));

@@ -23,8 +23,10 @@ public class DriverFactory {
                 //options.setHeadless(false);
                 options.addArguments("start-maximized"); // open Browser in maximized mode
                 // options.addArguments("disable-infobars"); // disabling infobars
-                //options.addArguments("--disable-extensions"); // disabling extensions
-               // options.addArguments("--disable-gpu"); // applicable to Windows os only
+                options.addArguments("--disable-extensions"); // disabling extensions
+                // Enable headless mode
+               /* options.addArguments("--headless");
+                options.addArguments("--disable-gpu"); // applicable to Windows os only*/
                 options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
                 options.addArguments("--no-sandbox"); // Bypass OS security model
                 options.addArguments("--disable-in-process-stack-traces");

@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Dec 18 01:48:35 EET 2023","Mon Dec 18 01:49:52 EET 2023","76693","Default Suite","Blink_AutomationFrameWork","TestScenarios.BlinkDEVFullHappyScenarioTest","TestScenarios.BlinkDEVFullHappyScenarioTest","ShouldBeAbleToExecuteFullHappyPathScenario","Full Scenario on Blink DEV Environment",""
