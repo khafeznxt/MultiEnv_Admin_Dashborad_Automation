@@ -129,14 +129,17 @@ public class FullHappyPathPage extends BasePage {
     protected WebElement packagepriority;
 
 
-    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/aside[2]/div/form/div[2]/div/button[2]")
+    @FindBy(xpath=  "//*[text() =\"Save\"]")
     protected WebElement savepackagebttn;
 
     // Create Ticket Elements
     @FindBy(xpath=  "//*[text() =\"Ticket Type\"]")
     protected WebElement tickettype;
 
-    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]")
+    @FindBy(xpath=  "//*[text() =\"Ticket Types\"]")
+    protected WebElement tickettypspage;
+
+    @FindBy(xpath=  "//*[text() =\"Add Ticket Type\"]")
     protected WebElement addticketbttn;
 
     @FindBy(id=  "name")
@@ -168,6 +171,9 @@ public class FullHappyPathPage extends BasePage {
     @FindBy(name = "Venue Type")
     protected WebElement venuetype;
 
+    @FindBy(xpath=  "//*[text() =\"All Venues\"]")
+    protected WebElement allvenuepage;
+
 
     @FindBy(xpath = "//*[@id=\"1\"]")
     protected WebElement venuetypevalue;
@@ -194,8 +200,6 @@ public class FullHappyPathPage extends BasePage {
     @FindBy(xpath=  "//*[text() =\"Create\"]")
     protected WebElement createvenuebttn;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[1]/div")
-    protected WebElement allvenuepage;
 
     //Create Session Elements
 
@@ -378,7 +382,7 @@ public class FullHappyPathPage extends BasePage {
     @FindBy(id=  "1")
     protected WebElement starsvalue;
 
-    @FindBy(xpath=  "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div/div[2]/button")
+    @FindBy(xpath=  "//*[text() =\"Create\"]")
     protected WebElement createstaybttn;
 
     // Add Room inside the stay
@@ -506,11 +510,11 @@ public class FullHappyPathPage extends BasePage {
         // WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
        //WebElement element1 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/div/div[1]")));
         //driver.navigate().refresh();
-        WebDriverWait wait45 = new WebDriverWait(driver,Duration.ofSeconds(30));
+      /*  WebDriverWait wait45 = new WebDriverWait(driver,Duration.ofSeconds(30));
         WebElement element45 = wait45.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
-    sessionsuccessmsg.click();
+    sessionsuccessmsg.click();*/
         WebDriverWait wait46 = new WebDriverWait(driver,Duration.ofSeconds(30));
-        WebElement element46 = wait46.until(ExpectedConditions.visibilityOf(createdgroup));
+        WebElement element46 = wait46.until(ExpectedConditions.elementToBeClickable(createdgroup));
     createdgroup.click();
     adduserbttn.click();
 
@@ -588,10 +592,9 @@ public class FullHappyPathPage extends BasePage {
     packagetitle.sendKeys("AutoPackage 2");
     packagepriority.sendKeys("3");
     savepackagebttn.click();
-
-   /* WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
+    WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(10));
     WebElement element13 = wait13.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
-    sessionsuccessmsg.click();*/
+    sessionsuccessmsg.click();
    // driver.navigate().refresh();
 
 
@@ -611,18 +614,23 @@ public class FullHappyPathPage extends BasePage {
         WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement element4 = wait1.until(ExpectedConditions.elementToBeClickable(tickettype));
         tickettype.click();
+
         WebDriverWait wait11 = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement element14 = wait11.until(ExpectedConditions.elementToBeClickable(addticketbttn));
         addticketbttn.click();
         ticketname.sendKeys("VMSType");
-        packagesdropdown.click();
+        //packagesdropdown.click();
         //selectpackage.click();
-       /* WebDriverWait wait30 = new WebDriverWait(driver, Duration.ofSeconds(30));
-        WebElement element30 = wait30.until(ExpectedConditions.elementToBeClickable(createticketbttn));*/
+        WebDriverWait wait30 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element30 = wait30.until(ExpectedConditions.elementToBeClickable(createticketbttn));
         createticketbttn.click();
+        WebDriverWait wait18 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element18 = wait18.until(ExpectedConditions.visibilityOf(tickettypspage));
         WebDriverWait wait31 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element31 = wait31.until(ExpectedConditions.elementToBeClickable(sessionsuccessmsg));
         sessionsuccessmsg.click();
+        WebDriverWait wait17 = new WebDriverWait(driver, Duration.ofSeconds(20));
+        WebElement element17 = wait17.until(ExpectedConditions.elementToBeClickable(eventconfig));
         eventconfig.click();
 
     }
@@ -643,17 +651,18 @@ public class FullHappyPathPage extends BasePage {
         WebDriverWait wait23 = new WebDriverWait(driver, Duration.ofSeconds(20));
         WebElement element23 = wait23.until(ExpectedConditions.visibilityOf(planning));
         planning.click();
-
+        planning.click();
+        planning.click();
         WebDriverWait wait28 = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement element28 = wait28.until(ExpectedConditions.visibilityOf(venues));
+        WebElement element28 = wait28.until(ExpectedConditions.elementToBeClickable(venues));
         venues.click();
-        //venues.click();
-        venues.isSelected();
-
-        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(20));
-        WebElement element4 = wait1.until(ExpectedConditions.visibilityOf(addvenue));
-
+        //venues.isSelected();
+        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element4 = wait1.until(ExpectedConditions.elementToBeClickable(addvenue));
         addvenue.click();
+       /* WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        boolean element14 = wait14.until(ExpectedConditions.invisibilityOf(allvenuepage));
+        Assert.assertTrue(element14);*/
         venuetype.click();
         venuetypevalue.click();
         venuename.sendKeys("Automated VMS venue");
@@ -662,9 +671,9 @@ public class FullHappyPathPage extends BasePage {
         //WebDriverWait wait22 = new WebDriverWait(driver, Duration.ofSeconds(20));
        // WebElement element22 = wait22.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
         sessionsuccessmsg.click();
-        WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(30));
-        boolean element14 = wait14.until(ExpectedConditions.invisibilityOf(addnewvenuepage));
-        Assert.assertTrue(element14);
+        WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        boolean element15 = wait15.until(ExpectedConditions.invisibilityOf(addnewvenuepage));
+        Assert.assertTrue(element15);
          //driver.navigate().refresh();
 
         //WebDriverWait wait10 = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -789,11 +798,16 @@ public class FullHappyPathPage extends BasePage {
         accomodation.click();
         WebDriverWait wait16 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element17 = wait16.until(ExpectedConditions.visibilityOf(roomtype));
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", roomtype);
         roomtype.click();
         WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element7 = wait15.until(ExpectedConditions.visibilityOf(addnewroomtypebttn));
         addnewroomtypebttn.click();
         roomname.sendKeys("AutoRoom4");
+        WebDriverWait wait20 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element20 = wait20.until(ExpectedConditions.presenceOfElementLocated(By.xpath( "//*[text() =\"Create\"]")));
+
         WebDriverWait wait13 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element22 = wait13.until(ExpectedConditions.elementToBeClickable(createroomtypebttn));
         createroomtypebttn.click();
@@ -821,6 +835,7 @@ public class FullHappyPathPage extends BasePage {
         stars.click();
         starsvalue.click();
         createstaybttn.click();
+
         sessionsuccessmsg.click();
 
         // Add room inside the stay actions
