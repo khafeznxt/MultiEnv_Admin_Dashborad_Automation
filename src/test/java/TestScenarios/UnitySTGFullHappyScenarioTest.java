@@ -41,6 +41,7 @@ private WebDriver driver;
         registrationParticipantsPage.CreateRoomType();
         registrationParticipantsPage.CreateStayAndAddRoom();*/
         fullHappyPathPage.AddTripToTheParticipant();
+        fullHappyPathPage.AddFlightToParticipant();
         DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
         deleteEventPage.DeleteEvent();
     }

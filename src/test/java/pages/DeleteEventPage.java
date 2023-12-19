@@ -60,7 +60,7 @@ public class DeleteEventPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div[2]/div/div[1]/div/button")
     protected WebElement threedots;
 
-    @FindBy(xpath = "//*[@id=\"root\"]/div[1]/div[5]/main/div[2]/section/div[2]/div/div[2]/div/div[1]/ul/div/button")
+    @FindBy(xpath = "//*[text() =\"Delete\"]")
     protected WebElement deletebttn;
 
     @FindBy(id = "delete-input")

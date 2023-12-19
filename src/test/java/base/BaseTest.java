@@ -6,6 +6,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.logging.LogEntries;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -14,6 +15,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.logging.Level;
 
 public class BaseTest {
     protected ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -31,6 +33,7 @@ public class BaseTest {
 
         WebDriver driver = new DriverFactory().InitializeDriver();
         setDriver(driver);
+
     }
 
 
@@ -43,6 +46,8 @@ public class BaseTest {
         //getDriver().quit();
     }
 
+
+
     public void TakeScreenShots(File destFile) {
         File file = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
         try {
@@ -53,4 +58,5 @@ public class BaseTest {
             throw new RuntimeException(e);
         }
     }
+
 }

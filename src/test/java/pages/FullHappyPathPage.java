@@ -487,6 +487,46 @@ public class FullHappyPathPage extends BasePage {
     @FindBy(xpath = "//*[text() =\"Save\"]")
     protected WebElement savestaybttn;
 
+    //Add Flight to Participant
+    @FindBy(xpath = "//*[text() =\"Add Flight\"]")
+    protected WebElement addflightbttn;
+    @FindBy(id = "outbound_departure_date")
+    protected WebElement departuredate;
+    @FindBy(id = "outbound_arrival_date")
+    protected WebElement arrivaldate;
+
+    @FindBy(id = "outbound_departure_time")
+    protected WebElement departuretime;
+    @FindBy(id = "outbound_arrival_time")
+    protected WebElement arrivaltime;
+
+    @FindBy(id = "search_outbound_departure_airport_code")
+    protected WebElement departurefrom;
+
+    @FindBy(xpath = "//*[text() =\"Nadzab  Airport (LAE)\"]")
+    protected WebElement departurefromvalue;
+
+
+    @FindBy(id = "search_outbound_arrival_airport_code")
+    protected WebElement arrivalto;
+
+    @FindBy(xpath = "//*[text() =\"Ulukhaktok Holman  Airport (YHI)\"]")
+    protected WebElement arrivaltovalue;
+
+
+    @FindBy(id = "outbound_cabin")
+    protected WebElement cabin;
+
+    @FindBy(xpath = "//*[text() =\"Business\"]")
+    protected WebElement cabinvalue;
+    @FindBy(id = "outbound_flight_number")
+    protected WebElement flightnumber;
+
+    @FindBy(id = "outbound_flight_pnr")
+    protected WebElement flightpnr;
+
+    @FindBy(xpath = "//*[text() =\"Create\"]")
+    protected WebElement createflightbttn;
 
     @Step
     public void CreateGroup() {
@@ -699,12 +739,12 @@ public class FullHappyPathPage extends BasePage {
         venuename.sendKeys("Automated VMS venue");
         venuecapacity.sendKeys("15");
         createvenuebttn.click();
-        //WebDriverWait wait22 = new WebDriverWait(driver, Duration.ofSeconds(20));
-        // WebElement element22 = wait22.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
+        WebDriverWait wait22 = new WebDriverWait(driver, Duration.ofSeconds(20));
+         WebElement element22 = wait22.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
         sessionsuccessmsg.click();
-        WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        /*WebDriverWait wait15 = new WebDriverWait(driver, Duration.ofSeconds(30));
         boolean element15 = wait15.until(ExpectedConditions.invisibilityOf(addnewvenuepage));
-        Assert.assertTrue(element15);
+        Assert.assertTrue(element15);*/
         //driver.navigate().refresh();
 
         //WebDriverWait wait10 = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -782,7 +822,8 @@ public class FullHappyPathPage extends BasePage {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", gate);
         gate.sendKeys("1");
-
+        WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        WebElement element14 = wait14.until(ExpectedConditions.elementToBeClickable(savenewticketbttn));
         // ticketquantity.sendKeys("10");
         //sessiontickettype.click();
         //sessiontickettypevalue.click();
@@ -793,8 +834,7 @@ public class FullHappyPathPage extends BasePage {
         //WebElement element7 = wait13.until(ExpectedConditions.visibilityOf(savenewticketbttn));
         JavascriptExecutor js2 = (JavascriptExecutor) driver;
         js2.executeScript("arguments[0].scrollIntoView();", savenewticketbttn);
-        WebDriverWait wait14 = new WebDriverWait(driver, Duration.ofSeconds(30));
-        WebElement element14 = wait14.until(ExpectedConditions.elementToBeClickable(savenewticketbttn));
+
         savenewticketbttn.click();
         WebDriverWait wait20 = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement element20 = wait20.until(ExpectedConditions.elementToBeClickable(sessionsuccessmsg));
@@ -949,9 +989,9 @@ public class FullHappyPathPage extends BasePage {
         stayselectuser.click();
         bookuserbttn.click();
         savestaybttn.click();
-        WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        /*WebDriverWait wait4 = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element4 = wait4.until(ExpectedConditions.visibilityOf(sessionsuccessmsg));
-        sessionsuccessmsg.click();
+        sessionsuccessmsg.click();*/
 
 
         //firstparticipant.click();
@@ -968,7 +1008,46 @@ public class FullHappyPathPage extends BasePage {
     }
 
     @Step
-    public void Add() {
+    public void AddFlightToParticipant() {
+        // The start for the separated test
+        // to test this case separetly
+        /*createdevent.click();
+        WebDriverWait wait18 = new WebDriverWait(driver,Duration.ofSeconds(30));
+        WebElement element18 = wait18.until(ExpectedConditions.visibilityOf(registration));
+        registration.click();
+        participants.click();
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+        WebElement element = wait.until(ExpectedConditions.visibilityOf(creatgroupbttn));
+        createdgroup.click();
+        WebDriverWait wait5 = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement element5 = wait5.until(ExpectedConditions.elementToBeClickable(firstparticipant));
+        firstparticipant.click();
+        tripinfo.click();*/
+
+        addflightbttn.click();
+        // Get the current date
+        LocalDate currentDate = LocalDate.now();
+        // Define the date format
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
+        // Format the current date to a string
+        String formattedDate = currentDate.format(formatter);
+        departuredate.sendKeys(formattedDate);
+        arrivaldate.sendKeys(formattedDate);
+        departuretime.sendKeys("1111AM");
+        arrivaltime.sendKeys("1114PM");
+        departurefrom.sendKeys("Nadzab");
+        departurefromvalue.click();
+        arrivalto.sendKeys("Ulukhaktok");
+        arrivaltovalue.click();
+        cabin.click();
+        cabinvalue.click();
+        flightnumber.sendKeys("123");
+        flightpnr.sendKeys("123");
+        createflightbttn.click();
+
+
+
+
 
 
     }

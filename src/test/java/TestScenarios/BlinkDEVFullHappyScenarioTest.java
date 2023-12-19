@@ -40,6 +40,7 @@ public class BlinkDEVFullHappyScenarioTest extends BaseTest {
         fullHappyPathPage.CreateStayAndAddRoom();
         fullHappyPathPage.AddTripToTheParticipant();
         fullHappyPathPage.AddStayToParticipant();
+        fullHappyPathPage.AddFlightToParticipant();
        /* DeleteEventPage deleteEventPage = new DeleteEventPage(getDriver());
         deleteEventPage.DeleteEvent();*/
 

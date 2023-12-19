@@ -34,5 +34,6 @@ public class CreateEventFromScratchTest extends BaseTest {
        // assertEquals("Response code is not as expected", expectedResponseCode, actualResponseCode);
 
         fromScratchEventPage.CreateEventFromScratch();
+
     }
 }
